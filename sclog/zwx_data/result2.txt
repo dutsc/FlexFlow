@@ -1,0 +1,2769 @@
+workSpaceSize (128 MB)
+workSpaceSize (128 MB)
+workSpaceSize (128 MB)
+workSpaceSize (128 MB)
+OPT Config:
+	do_layer_norm_before: 1
+	dropout: 0.1
+	enable_bias: 1
+	ffn_dim: 16384
+	hidden_size: 4096
+	layer_norm_elementwise_affine: 1
+	max_position_embeddings: 2048
+	num_attention_heads: 32
+	num_hidden_layers: 32
+	vocab_size: 50272
+	word_embed_proj_dim: 4096
+	max_beam_width: 1
+	max_beam_depth: 8
+------start compile ----------
+num_nodes = 1 num_gpus_per_node = 4
+optimal_views.size = 199
+views.size() = 199
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ndim(1) dims[1 0 0 0]
+------finished loading weights----------
+OPT Config:
+	do_layer_norm_before: 1
+	dropout: 0.1
+	enable_bias: 1
+	ffn_dim: 3072
+	hidden_size: 768
+	layer_norm_elementwise_affine: 1
+	max_position_embeddings: 2048
+	num_attention_heads: 12
+	num_hidden_layers: 12
+	vocab_size: 50272
+	word_embed_proj_dim: 768
+	max_beam_width: 1
+	max_beam_depth: 8
+------start compile ----------
+spec create operator: layers_0_attention_1000005
+spec create operator: layers_1_attention_1000011
+spec create operator: layers_2_attention_1000017
+spec create operator: layers_3_attention_1000023
+spec create operator: layers_4_attention_1000029
+spec create operator: layers_5_attention_1000035
+spec create operator: layers_6_attention_1000041
+spec create operator: layers_7_attention_1000047
+spec create operator: layers_8_attention_1000053
+spec create operator: layers_9_attention_1000059
+spec create operator: layers_10_attention_1000065
+spec create operator: layers_11_attention_1000071
+num_nodes = 1 num_gpus_per_node = 4
+optimal_views.size = 80
+views.size() = 80
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ndim(1) dims[1 0 0 0]
+------finished loading weights----------
+========== register ssm model ==========
+Register new model with id: 0
+Prompt[0]: Here are some travel tips for Shanghai: n
+========== generate ==========
+========== generate_spec_infer ==========
+[0]11773
+[1]32
+[2]103
+[3]1504
+[4]4965
+[5]13
+[6]7137
+[7]35
+[8]295
+Num of models: 1
+[0 - 7fae4d11a000]   36.944089 {3}{RequestManager}: [1000000]New request tokens: 2 11773 32 103 1504 4965 13 7137 35 295
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   36.945653 {3}{RequestManager}: SSMs inference time:0.00146529s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   36.946355 {3}{RequestManager}: LLM Tree Verification time:0.000708728s.
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   36.947639 {3}{RequestManager}: SSMs inference time:0.0012591s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   36.948124 {3}{RequestManager}: LLM Tree Verification time:0.000486522s.
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   36.949386 {3}{RequestManager}: SSMs inference time:0.00124265s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   36.949840 {3}{RequestManager}: LLM Tree Verification time:0.000455652s.
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   36.951076 {3}{RequestManager}: SSMs inference time:0.00122305s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   36.951522 {3}{RequestManager}: LLM Tree Verification time:0.000447568s.
+
+############### prepare_next_batch_init ###############
+SSM KV Cache Size init: 10
+LLM KV Cache Size init: 0
+load 10 tokens for request 1000000
+total prompt in request: 10
+
+############### prepare_next_batch_verify ###############
+max_prompt_load_size: 245
+new_bc.requestsInfo[i].num_tokens_in_batch: 10
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   37.698866 {3}{RequestManager}: SSMs inference time:0.00212254s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   37.699558 {3}{RequestManager}: LLM Tree Verification time:0.000698845s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   37.774761 {3}{RequestManager}: Input tree size (1) Output tree size (1)
+[0 - 7fae4d11a000]   37.774767 {3}{RequestManager}: Input tree: 9:295
+[0 - 7fae4d11a000]   37.774769 {3}{RequestManager}: Output tree: 10:0
+[0 - 7fae4d11a000]   37.774771 {3}{RequestManager}: Committed tokens: 9:9
+[0 - 7fae4d11a000]   37.774776 {3}{RequestManager}: Verified: 10:0
+[0 - 7fae4d11a000]   37.774778 {3}{RequestManager}: New committed: 9:9
+[0 - 7fae4d11a000]   37.774780 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   37.774877 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   37.923094 {3}{RequestManager}: SSMs inference time:0.00143678s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   37.923658 {3}{RequestManager}: LLM Tree Verification time:0.000570597s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   37.923702 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   37.923708 {3}{RequestManager}: Input tree: 10:0 11:50118 12:50118 13:133 14:343 15:9 16:7137 17:16 18:10
+[0 - 7fae4d11a000]   37.923712 {3}{RequestManager}: Output tree: 11:0 12:0 13:0 14:0 15:0 16:0 17:0 18:0 19:0
+[0 - 7fae4d11a000]   37.923715 {3}{RequestManager}: Committed tokens: 0:10 1:11 2:12 3:13 4:14 5:15 6:16 7:17 8:18
+[0 - 7fae4d11a000]   37.923718 {3}{RequestManager}: Verified: 11:0
+[0 - 7fae4d11a000]   37.923720 {3}{RequestManager}: New committed: 0:10
+[0 - 7fae4d11a000]   37.923721 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   37.923735 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   38.042790 {3}{RequestManager}: SSMs inference time:0.00137226s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   38.043295 {3}{RequestManager}: LLM Tree Verification time:0.000508066s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   38.043331 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   38.043336 {3}{RequestManager}: Input tree: 11:0 12:1437 13:1437 14:1437 15:1437 16:1437 17:1437 18:1437 19:1437
+[0 - 7fae4d11a000]   38.043339 {3}{RequestManager}: Output tree: 12:0 13:0 14:0 15:0 16:0 17:0 18:0 19:0 20:0
+[0 - 7fae4d11a000]   38.043342 {3}{RequestManager}: Committed tokens: 0:11 1:12 2:13 3:14 4:15 5:16 6:17 7:18 8:19
+[0 - 7fae4d11a000]   38.043344 {3}{RequestManager}: Verified: 12:0
+[0 - 7fae4d11a000]   38.043346 {3}{RequestManager}: New committed: 0:11
+[0 - 7fae4d11a000]   38.043348 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   38.043359 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   38.211937 {3}{RequestManager}: SSMs inference time:0.00362235s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   38.213260 {3}{RequestManager}: LLM Tree Verification time:0.00133169s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   38.213358 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   38.213371 {3}{RequestManager}: Input tree: 12:0 13:1437 14:1437 15:1437 16:1437 17:1437 18:1437 19:1437 20:1437
+[0 - 7fae4d11a000]   38.213379 {3}{RequestManager}: Output tree: 13:0 14:0 15:0 16:0 17:0 18:0 19:0 20:0 21:0
+[0 - 7fae4d11a000]   38.213387 {3}{RequestManager}: Committed tokens: 0:12 1:13 2:14 3:15 4:16 5:17 6:18 7:19 8:20
+[0 - 7fae4d11a000]   38.213393 {3}{RequestManager}: Verified: 13:0
+[0 - 7fae4d11a000]   38.213397 {3}{RequestManager}: New committed: 0:12
+[0 - 7fae4d11a000]   38.213401 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   38.213431 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   38.413964 {3}{RequestManager}: SSMs inference time:0.00347929s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   38.415696 {3}{RequestManager}: LLM Tree Verification time:0.00173962s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   38.415776 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   38.415789 {3}{RequestManager}: Input tree: 13:0 14:1437 15:1437 16:1437 17:1437 18:1437 19:1437 20:1437 21:1437
+[0 - 7fae4d11a000]   38.415798 {3}{RequestManager}: Output tree: 14:0 15:0 16:0 17:0 18:0 19:0 20:0 21:0 22:0
+[0 - 7fae4d11a000]   38.415806 {3}{RequestManager}: Committed tokens: 0:13 1:14 2:15 3:16 4:17 5:18 6:19 7:20 8:21
+[0 - 7fae4d11a000]   38.415813 {3}{RequestManager}: Verified: 14:0
+[0 - 7fae4d11a000]   38.415818 {3}{RequestManager}: New committed: 0:13
+[0 - 7fae4d11a000]   38.415821 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   38.415852 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   38.620421 {3}{RequestManager}: SSMs inference time:0.00322178s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   38.621592 {3}{RequestManager}: LLM Tree Verification time:0.00117852s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   38.621666 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   38.621678 {3}{RequestManager}: Input tree: 14:0 15:1437 16:1437 17:1437 18:1437 19:1437 20:1437 21:1437 22:1437
+[0 - 7fae4d11a000]   38.621687 {3}{RequestManager}: Output tree: 15:0 16:0 17:0 18:0 19:0 20:0 21:0 22:0 23:0
+[0 - 7fae4d11a000]   38.621695 {3}{RequestManager}: Committed tokens: 0:14 1:15 2:16 3:17 4:18 5:19 6:20 7:21 8:22
+[0 - 7fae4d11a000]   38.621701 {3}{RequestManager}: Verified: 15:0
+[0 - 7fae4d11a000]   38.621705 {3}{RequestManager}: New committed: 0:14
+[0 - 7fae4d11a000]   38.621709 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   38.621739 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   38.821076 {3}{RequestManager}: SSMs inference time:0.00321303s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   38.822242 {3}{RequestManager}: LLM Tree Verification time:0.001173s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   38.822314 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   38.822326 {3}{RequestManager}: Input tree: 15:0 16:1437 17:1437 18:1437 19:1437 20:1437 21:1437 22:1437 23:1437
+[0 - 7fae4d11a000]   38.822335 {3}{RequestManager}: Output tree: 16:0 17:0 18:0 19:0 20:0 21:0 22:0 23:0 24:0
+[0 - 7fae4d11a000]   38.822343 {3}{RequestManager}: Committed tokens: 0:15 1:16 2:17 3:18 4:19 5:20 6:21 7:22 8:23
+[0 - 7fae4d11a000]   38.822349 {3}{RequestManager}: Verified: 16:0
+[0 - 7fae4d11a000]   38.822353 {3}{RequestManager}: New committed: 0:15
+[0 - 7fae4d11a000]   38.822357 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   38.822390 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   39.024591 {3}{RequestManager}: SSMs inference time:0.00326724s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   39.025762 {3}{RequestManager}: LLM Tree Verification time:0.00117688s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   39.025834 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   39.025847 {3}{RequestManager}: Input tree: 16:0 17:1437 18:1437 19:1437 20:1437 21:1437 22:1437 23:1437 24:1437
+[0 - 7fae4d11a000]   39.025856 {3}{RequestManager}: Output tree: 17:0 18:0 19:0 20:0 21:0 22:0 23:0 24:0 25:0
+[0 - 7fae4d11a000]   39.025864 {3}{RequestManager}: Committed tokens: 0:16 1:17 2:18 3:19 4:20 5:21 6:22 7:23 8:24
+[0 - 7fae4d11a000]   39.025870 {3}{RequestManager}: Verified: 17:0
+[0 - 7fae4d11a000]   39.025875 {3}{RequestManager}: New committed: 0:16
+[0 - 7fae4d11a000]   39.025879 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   39.025913 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   39.212697 {3}{RequestManager}: SSMs inference time:0.00341248s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   39.213873 {3}{RequestManager}: LLM Tree Verification time:0.00118424s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   39.213950 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   39.213963 {3}{RequestManager}: Input tree: 17:0 18:1437 19:1437 20:1437 21:1437 22:1437 23:1437 24:1437 25:1437
+[0 - 7fae4d11a000]   39.213972 {3}{RequestManager}: Output tree: 18:0 19:0 20:0 21:0 22:0 23:0 24:0 25:0 26:0
+[0 - 7fae4d11a000]   39.213980 {3}{RequestManager}: Committed tokens: 0:17 1:18 2:19 3:20 4:21 5:22 6:23 7:24 8:25
+[0 - 7fae4d11a000]   39.213986 {3}{RequestManager}: Verified: 18:0
+[0 - 7fae4d11a000]   39.213991 {3}{RequestManager}: New committed: 0:17
+[0 - 7fae4d11a000]   39.213995 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   39.214029 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   39.411228 {3}{RequestManager}: SSMs inference time:0.00319603s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   39.412434 {3}{RequestManager}: LLM Tree Verification time:0.00121189s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   39.412512 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   39.412524 {3}{RequestManager}: Input tree: 18:0 19:50118 20:50118 21:133 22:7137 23:1016 24:4414 25:16 26:10
+[0 - 7fae4d11a000]   39.412533 {3}{RequestManager}: Output tree: 19:0 20:0 21:0 22:0 23:0 24:0 25:0 26:0 27:0
+[0 - 7fae4d11a000]   39.412541 {3}{RequestManager}: Committed tokens: 0:18 1:19 2:20 3:21 4:22 5:23 6:24 7:25 8:26
+[0 - 7fae4d11a000]   39.412547 {3}{RequestManager}: Verified: 19:0
+[0 - 7fae4d11a000]   39.412552 {3}{RequestManager}: New committed: 0:18
+[0 - 7fae4d11a000]   39.412555 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   39.412593 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   39.606419 {3}{RequestManager}: SSMs inference time:0.00324034s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   39.607584 {3}{RequestManager}: LLM Tree Verification time:0.00117055s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   39.607657 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   39.607669 {3}{RequestManager}: Input tree: 19:0 20:50118 21:50118 22:133 23:7137 24:1016 25:4414 26:16 27:10
+[0 - 7fae4d11a000]   39.607678 {3}{RequestManager}: Output tree: 20:0 21:0 22:0 23:0 24:0 25:0 26:0 27:0 28:0
+[0 - 7fae4d11a000]   39.607686 {3}{RequestManager}: Committed tokens: 0:19 1:20 2:21 3:22 4:23 5:24 6:25 7:26 8:27
+[0 - 7fae4d11a000]   39.607692 {3}{RequestManager}: Verified: 20:0
+[0 - 7fae4d11a000]   39.607697 {3}{RequestManager}: New committed: 0:19
+[0 - 7fae4d11a000]   39.607701 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   39.607735 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   39.783570 {3}{RequestManager}: SSMs inference time:0.00323311s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   39.784724 {3}{RequestManager}: LLM Tree Verification time:0.00116075s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   39.784795 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   39.784806 {3}{RequestManager}: Input tree: 20:0 21:50118 22:50118 23:133 24:7137 25:1016 26:4414 27:16 28:10
+[0 - 7fae4d11a000]   39.784814 {3}{RequestManager}: Output tree: 21:0 22:0 23:0 24:0 25:0 26:0 27:0 28:0 29:0
+[0 - 7fae4d11a000]   39.784822 {3}{RequestManager}: Committed tokens: 0:20 1:21 2:22 3:23 4:24 5:25 6:26 7:27 8:28
+[0 - 7fae4d11a000]   39.784828 {3}{RequestManager}: Verified: 21:0
+[0 - 7fae4d11a000]   39.784833 {3}{RequestManager}: New committed: 0:20
+[0 - 7fae4d11a000]   39.784836 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   39.784871 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   39.982302 {3}{RequestManager}: SSMs inference time:0.00338304s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   39.983476 {3}{RequestManager}: LLM Tree Verification time:0.00118006s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   39.983553 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   39.983564 {3}{RequestManager}: Input tree: 21:0 22:50118 23:50118 24:133 25:7137 26:1016 27:4414 28:16 29:10
+[0 - 7fae4d11a000]   39.983573 {3}{RequestManager}: Output tree: 22:0 23:0 24:0 25:0 26:0 27:0 28:0 29:0 30:0
+[0 - 7fae4d11a000]   39.983581 {3}{RequestManager}: Committed tokens: 0:21 1:22 2:23 3:24 4:25 5:26 6:27 7:28 8:29
+[0 - 7fae4d11a000]   39.983587 {3}{RequestManager}: Verified: 22:0
+[0 - 7fae4d11a000]   39.983591 {3}{RequestManager}: New committed: 0:21
+[0 - 7fae4d11a000]   39.983595 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   39.983630 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   40.178577 {3}{RequestManager}: SSMs inference time:0.00322964s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   40.179734 {3}{RequestManager}: LLM Tree Verification time:0.00116397s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   40.179806 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   40.179818 {3}{RequestManager}: Input tree: 22:0 23:50118 24:50118 25:133 26:7137 27:1016 28:4414 29:16 30:10
+[0 - 7fae4d11a000]   40.179826 {3}{RequestManager}: Output tree: 23:0 24:0 25:0 26:0 27:0 28:0 29:0 30:0 31:0
+[0 - 7fae4d11a000]   40.179835 {3}{RequestManager}: Committed tokens: 0:22 1:23 2:24 3:25 4:26 5:27 6:28 7:29 8:30
+[0 - 7fae4d11a000]   40.179841 {3}{RequestManager}: Verified: 23:0
+[0 - 7fae4d11a000]   40.179846 {3}{RequestManager}: New committed: 0:22
+[0 - 7fae4d11a000]   40.179849 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   40.179885 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   40.356373 {3}{RequestManager}: SSMs inference time:0.00322571s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   40.357518 {3}{RequestManager}: LLM Tree Verification time:0.0011533s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   40.357591 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   40.357603 {3}{RequestManager}: Input tree: 23:0 24:50118 25:50118 26:133 27:7137 28:1016 29:4414 30:16 31:10
+[0 - 7fae4d11a000]   40.357611 {3}{RequestManager}: Output tree: 24:0 25:0 26:0 27:0 28:0 29:0 30:0 31:0 32:0
+[0 - 7fae4d11a000]   40.357619 {3}{RequestManager}: Committed tokens: 0:23 1:24 2:25 3:26 4:27 5:28 6:29 7:30 8:31
+[0 - 7fae4d11a000]   40.357625 {3}{RequestManager}: Verified: 24:0
+[0 - 7fae4d11a000]   40.357629 {3}{RequestManager}: New committed: 0:23
+[0 - 7fae4d11a000]   40.357633 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   40.357669 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   40.544947 {3}{RequestManager}: SSMs inference time:0.00331758s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   40.546123 {3}{RequestManager}: LLM Tree Verification time:0.0011828s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   40.546197 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   40.546210 {3}{RequestManager}: Input tree: 24:0 25:50118 26:50118 27:133 28:7137 29:1016 30:4414 31:16 32:10
+[0 - 7fae4d11a000]   40.546219 {3}{RequestManager}: Output tree: 25:0 26:0 27:0 28:0 29:0 30:0 31:0 32:0 33:0
+[0 - 7fae4d11a000]   40.546227 {3}{RequestManager}: Committed tokens: 0:24 1:25 2:26 3:27 4:28 5:29 6:30 7:31 8:32
+[0 - 7fae4d11a000]   40.546233 {3}{RequestManager}: Verified: 25:0
+[0 - 7fae4d11a000]   40.546237 {3}{RequestManager}: New committed: 0:24
+[0 - 7fae4d11a000]   40.546241 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   40.546282 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   40.745112 {3}{RequestManager}: SSMs inference time:0.00347954s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   40.746304 {3}{RequestManager}: LLM Tree Verification time:0.00119884s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   40.746375 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   40.746387 {3}{RequestManager}: Input tree: 25:0 26:50118 27:50118 28:133 29:7137 30:1016 31:4414 32:16 33:10
+[0 - 7fae4d11a000]   40.746395 {3}{RequestManager}: Output tree: 26:0 27:0 28:0 29:0 30:0 31:0 32:0 33:0 34:0
+[0 - 7fae4d11a000]   40.746404 {3}{RequestManager}: Committed tokens: 0:25 1:26 2:27 3:28 4:29 5:30 6:31 7:32 8:33
+[0 - 7fae4d11a000]   40.746410 {3}{RequestManager}: Verified: 26:0
+[0 - 7fae4d11a000]   40.746414 {3}{RequestManager}: New committed: 0:25
+[0 - 7fae4d11a000]   40.746418 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   40.746458 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   40.941367 {3}{RequestManager}: SSMs inference time:0.00328199s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   40.942527 {3}{RequestManager}: LLM Tree Verification time:0.001166s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   40.942599 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   40.942611 {3}{RequestManager}: Input tree: 26:0 27:50118 28:50118 29:133 30:7137 31:1016 32:4414 33:16 34:10
+[0 - 7fae4d11a000]   40.942620 {3}{RequestManager}: Output tree: 27:0 28:0 29:0 30:0 31:0 32:0 33:0 34:0 35:0
+[0 - 7fae4d11a000]   40.942628 {3}{RequestManager}: Committed tokens: 0:26 1:27 2:28 3:29 4:30 5:31 6:32 7:33 8:34
+[0 - 7fae4d11a000]   40.942634 {3}{RequestManager}: Verified: 27:0
+[0 - 7fae4d11a000]   40.942639 {3}{RequestManager}: New committed: 0:26
+[0 - 7fae4d11a000]   40.942642 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   40.942682 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   41.145613 {3}{RequestManager}: SSMs inference time:0.00324804s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   41.146764 {3}{RequestManager}: LLM Tree Verification time:0.00115676s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   41.146843 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   41.146855 {3}{RequestManager}: Input tree: 27:0 28:50118 29:50118 30:133 31:7137 32:1016 33:4414 34:16 35:10
+[0 - 7fae4d11a000]   41.146864 {3}{RequestManager}: Output tree: 28:0 29:0 30:0 31:0 32:0 33:0 34:0 35:0 36:0
+[0 - 7fae4d11a000]   41.146872 {3}{RequestManager}: Committed tokens: 0:27 1:28 2:29 3:30 4:31 5:32 6:33 7:34 8:35
+[0 - 7fae4d11a000]   41.146877 {3}{RequestManager}: Verified: 28:0
+[0 - 7fae4d11a000]   41.146882 {3}{RequestManager}: New committed: 0:27
+[0 - 7fae4d11a000]   41.146886 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   41.146926 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   41.343542 {3}{RequestManager}: SSMs inference time:0.00326541s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   41.344698 {3}{RequestManager}: LLM Tree Verification time:0.00116442s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   41.344773 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   41.344786 {3}{RequestManager}: Input tree: 28:0 29:50118 30:50118 31:133 32:7137 33:1016 34:4414 35:16 36:10
+[0 - 7fae4d11a000]   41.344795 {3}{RequestManager}: Output tree: 29:0 30:0 31:0 32:0 33:0 34:0 35:0 36:0 37:0
+[0 - 7fae4d11a000]   41.344803 {3}{RequestManager}: Committed tokens: 0:28 1:29 2:30 3:31 4:32 5:33 6:34 7:35 8:36
+[0 - 7fae4d11a000]   41.344809 {3}{RequestManager}: Verified: 29:0
+[0 - 7fae4d11a000]   41.344813 {3}{RequestManager}: New committed: 0:28
+[0 - 7fae4d11a000]   41.344817 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   41.344859 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   41.539487 {3}{RequestManager}: SSMs inference time:0.00340517s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   41.540659 {3}{RequestManager}: LLM Tree Verification time:0.00118043s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   41.540732 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   41.540744 {3}{RequestManager}: Input tree: 29:0 30:50118 31:50118 32:133 33:7137 34:1016 35:4414 36:16 37:10
+[0 - 7fae4d11a000]   41.540753 {3}{RequestManager}: Output tree: 30:0 31:0 32:0 33:0 34:0 35:0 36:0 37:0 38:0
+[0 - 7fae4d11a000]   41.540760 {3}{RequestManager}: Committed tokens: 0:29 1:30 2:31 3:32 4:33 5:34 6:35 7:36 8:37
+[0 - 7fae4d11a000]   41.540766 {3}{RequestManager}: Verified: 30:0
+[0 - 7fae4d11a000]   41.540771 {3}{RequestManager}: New committed: 0:29
+[0 - 7fae4d11a000]   41.540774 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   41.540817 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   41.740127 {3}{RequestManager}: SSMs inference time:0.00329592s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   41.741280 {3}{RequestManager}: LLM Tree Verification time:0.00115927s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   41.741351 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   41.741362 {3}{RequestManager}: Input tree: 30:0 31:50118 32:50118 33:133 34:7137 35:1016 36:4414 37:16 38:10
+[0 - 7fae4d11a000]   41.741371 {3}{RequestManager}: Output tree: 31:0 32:0 33:0 34:0 35:0 36:0 37:0 38:0 39:0
+[0 - 7fae4d11a000]   41.741379 {3}{RequestManager}: Committed tokens: 0:30 1:31 2:32 3:33 4:34 5:35 6:36 7:37 8:38
+[0 - 7fae4d11a000]   41.741385 {3}{RequestManager}: Verified: 31:0
+[0 - 7fae4d11a000]   41.741390 {3}{RequestManager}: New committed: 0:30
+[0 - 7fae4d11a000]   41.741393 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   41.741435 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   41.916887 {3}{RequestManager}: SSMs inference time:0.00349143s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   41.918091 {3}{RequestManager}: LLM Tree Verification time:0.00121038s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   41.918163 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   41.918175 {3}{RequestManager}: Input tree: 31:0 32:50118 33:50118 34:133 35:7137 36:1016 37:4414 38:16 39:10
+[0 - 7fae4d11a000]   41.918184 {3}{RequestManager}: Output tree: 32:0 33:0 34:0 35:0 36:0 37:0 38:0 39:0 40:0
+[0 - 7fae4d11a000]   41.918192 {3}{RequestManager}: Committed tokens: 0:31 1:32 2:33 3:34 4:35 5:36 6:37 7:38 8:39
+[0 - 7fae4d11a000]   41.918198 {3}{RequestManager}: Verified: 32:0
+[0 - 7fae4d11a000]   41.918202 {3}{RequestManager}: New committed: 0:31
+[0 - 7fae4d11a000]   41.918206 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   41.918253 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   42.106718 {3}{RequestManager}: SSMs inference time:0.00349611s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   42.107913 {3}{RequestManager}: LLM Tree Verification time:0.00120134s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   42.107980 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   42.107993 {3}{RequestManager}: Input tree: 32:0 33:49306 34:49306 35:49306 36:49306 37:49306 38:49306 39:49306 40:49306
+[0 - 7fae4d11a000]   42.108001 {3}{RequestManager}: Output tree: 33:0 34:0 35:0 36:0 37:0 38:0 39:0 40:0 41:0
+[0 - 7fae4d11a000]   42.108009 {3}{RequestManager}: Committed tokens: 0:32 1:33 2:34 3:35 4:36 5:37 6:38 7:39 8:40
+[0 - 7fae4d11a000]   42.108015 {3}{RequestManager}: Verified: 33:0
+[0 - 7fae4d11a000]   42.108019 {3}{RequestManager}: New committed: 0:32
+[0 - 7fae4d11a000]   42.108022 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   42.108065 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   42.303248 {3}{RequestManager}: SSMs inference time:0.00364742s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   42.304478 {3}{RequestManager}: LLM Tree Verification time:0.00123886s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   42.304553 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   42.304567 {3}{RequestManager}: Input tree: 33:0 34:49306 35:49306 36:49306 37:49306 38:49306 39:49306 40:49306 41:49306
+[0 - 7fae4d11a000]   42.304576 {3}{RequestManager}: Output tree: 34:0 35:0 36:0 37:0 38:0 39:0 40:0 41:0 42:0
+[0 - 7fae4d11a000]   42.304585 {3}{RequestManager}: Committed tokens: 0:33 1:34 2:35 3:36 4:37 5:38 6:39 7:40 8:41
+[0 - 7fae4d11a000]   42.304591 {3}{RequestManager}: Verified: 34:0
+[0 - 7fae4d11a000]   42.304596 {3}{RequestManager}: New committed: 0:33
+[0 - 7fae4d11a000]   42.304599 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   42.304645 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   42.497678 {3}{RequestManager}: SSMs inference time:0.00349634s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   42.498919 {3}{RequestManager}: LLM Tree Verification time:0.00124811s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   42.498991 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   42.499003 {3}{RequestManager}: Input tree: 34:0 35:49306 36:49306 37:49306 38:49306 39:49306 40:49306 41:49306 42:49306
+[0 - 7fae4d11a000]   42.499011 {3}{RequestManager}: Output tree: 35:0 36:0 37:0 38:0 39:0 40:0 41:0 42:0 43:0
+[0 - 7fae4d11a000]   42.499020 {3}{RequestManager}: Committed tokens: 0:34 1:35 2:36 3:37 4:38 5:39 6:40 7:41 8:42
+[0 - 7fae4d11a000]   42.499026 {3}{RequestManager}: Verified: 35:0
+[0 - 7fae4d11a000]   42.499031 {3}{RequestManager}: New committed: 0:34
+[0 - 7fae4d11a000]   42.499034 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   42.499081 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   42.695453 {3}{RequestManager}: SSMs inference time:0.00337765s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   42.696643 {3}{RequestManager}: LLM Tree Verification time:0.00119566s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   42.696714 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   42.696726 {3}{RequestManager}: Input tree: 35:0 36:49306 37:49306 38:49306 39:49306 40:49306 41:49306 42:49306 43:49306
+[0 - 7fae4d11a000]   42.696735 {3}{RequestManager}: Output tree: 36:0 37:0 38:0 39:0 40:0 41:0 42:0 43:0 44:0
+[0 - 7fae4d11a000]   42.696743 {3}{RequestManager}: Committed tokens: 0:35 1:36 2:37 3:38 4:39 5:40 6:41 7:42 8:43
+[0 - 7fae4d11a000]   42.696749 {3}{RequestManager}: Verified: 36:0
+[0 - 7fae4d11a000]   42.696754 {3}{RequestManager}: New committed: 0:35
+[0 - 7fae4d11a000]   42.696757 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   42.696804 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   42.866476 {3}{RequestManager}: SSMs inference time:0.00331181s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   42.867645 {3}{RequestManager}: LLM Tree Verification time:0.00117567s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   42.867713 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   42.867726 {3}{RequestManager}: Input tree: 36:0 37:49306 38:49306 39:49306 40:49306 41:49306 42:49306 43:49306 44:49306
+[0 - 7fae4d11a000]   42.867735 {3}{RequestManager}: Output tree: 37:0 38:0 39:0 40:0 41:0 42:0 43:0 44:0 45:0
+[0 - 7fae4d11a000]   42.867744 {3}{RequestManager}: Committed tokens: 0:36 1:37 2:38 3:39 4:40 5:41 6:42 7:43 8:44
+[0 - 7fae4d11a000]   42.867750 {3}{RequestManager}: Verified: 37:0
+[0 - 7fae4d11a000]   42.867754 {3}{RequestManager}: New committed: 0:36
+[0 - 7fae4d11a000]   42.867758 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   42.867807 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   43.064982 {3}{RequestManager}: SSMs inference time:0.00340766s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   43.066174 {3}{RequestManager}: LLM Tree Verification time:0.00119936s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   43.066244 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   43.066256 {3}{RequestManager}: Input tree: 37:0 38:8883 39:8883 40:8883 41:8883 42:8883 43:8883 44:8883 45:8883
+[0 - 7fae4d11a000]   43.066264 {3}{RequestManager}: Output tree: 38:0 39:0 40:0 41:0 42:0 43:0 44:0 45:0 46:0
+[0 - 7fae4d11a000]   43.066272 {3}{RequestManager}: Committed tokens: 0:37 1:38 2:39 3:40 4:41 5:42 6:43 7:44 8:45
+[0 - 7fae4d11a000]   43.066278 {3}{RequestManager}: Verified: 38:0
+[0 - 7fae4d11a000]   43.066282 {3}{RequestManager}: New committed: 0:37
+[0 - 7fae4d11a000]   43.066286 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   43.066336 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   43.261940 {3}{RequestManager}: SSMs inference time:0.00333721s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   43.263101 {3}{RequestManager}: LLM Tree Verification time:0.0011683s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   43.263174 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   43.263186 {3}{RequestManager}: Input tree: 38:0 39:8883 40:8883 41:8883 42:8883 43:8883 44:8883 45:8883 46:8883
+[0 - 7fae4d11a000]   43.263195 {3}{RequestManager}: Output tree: 39:0 40:0 41:0 42:0 43:0 44:0 45:0 46:0 47:0
+[0 - 7fae4d11a000]   43.263204 {3}{RequestManager}: Committed tokens: 0:38 1:39 2:40 3:41 4:42 5:43 6:44 7:45 8:46
+[0 - 7fae4d11a000]   43.263211 {3}{RequestManager}: Verified: 39:0
+[0 - 7fae4d11a000]   43.263215 {3}{RequestManager}: New committed: 0:38
+[0 - 7fae4d11a000]   43.263219 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   43.263269 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   43.462463 {3}{RequestManager}: SSMs inference time:0.00329906s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   43.463630 {3}{RequestManager}: LLM Tree Verification time:0.00117481s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   43.463705 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   43.463716 {3}{RequestManager}: Input tree: 39:0 40:8883 41:8883 42:8883 43:8883 44:8883 45:8883 46:8883 47:8883
+[0 - 7fae4d11a000]   43.463725 {3}{RequestManager}: Output tree: 40:0 41:0 42:0 43:0 44:0 45:0 46:0 47:0 48:0
+[0 - 7fae4d11a000]   43.463734 {3}{RequestManager}: Committed tokens: 0:39 1:40 2:41 3:42 4:43 5:44 6:45 7:46 8:47
+[0 - 7fae4d11a000]   43.463740 {3}{RequestManager}: Verified: 40:0
+[0 - 7fae4d11a000]   43.463744 {3}{RequestManager}: New committed: 0:39
+[0 - 7fae4d11a000]   43.463748 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   43.463800 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   43.659695 {3}{RequestManager}: SSMs inference time:0.00331163s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   43.660855 {3}{RequestManager}: LLM Tree Verification time:0.00116625s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   43.660926 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   43.660937 {3}{RequestManager}: Input tree: 40:0 41:8883 42:8883 43:8883 44:8883 45:8883 46:8883 47:8883 48:8883
+[0 - 7fae4d11a000]   43.660946 {3}{RequestManager}: Output tree: 41:0 42:0 43:0 44:0 45:0 46:0 47:0 48:0 49:0
+[0 - 7fae4d11a000]   43.660954 {3}{RequestManager}: Committed tokens: 0:40 1:41 2:42 3:43 4:44 5:45 6:46 7:47 8:48
+[0 - 7fae4d11a000]   43.660960 {3}{RequestManager}: Verified: 41:0
+[0 - 7fae4d11a000]   43.660965 {3}{RequestManager}: New committed: 0:40
+[0 - 7fae4d11a000]   43.660968 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   43.661019 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   43.861986 {3}{RequestManager}: SSMs inference time:0.00399038s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   43.863656 {3}{RequestManager}: LLM Tree Verification time:0.00167661s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   43.863732 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   43.863744 {3}{RequestManager}: Input tree: 41:0 42:49306 43:49306 44:49306 45:49306 46:49306 47:49306 48:49306 49:49306
+[0 - 7fae4d11a000]   43.863752 {3}{RequestManager}: Output tree: 42:0 43:0 44:0 45:0 46:0 47:0 48:0 49:0 50:0
+[0 - 7fae4d11a000]   43.863761 {3}{RequestManager}: Committed tokens: 0:41 1:42 2:43 3:44 4:45 5:46 6:47 7:48 8:49
+[0 - 7fae4d11a000]   43.863766 {3}{RequestManager}: Verified: 42:0
+[0 - 7fae4d11a000]   43.863771 {3}{RequestManager}: New committed: 0:41
+[0 - 7fae4d11a000]   43.863775 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   43.863825 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   44.062202 {3}{RequestManager}: SSMs inference time:0.00332908s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   44.063363 {3}{RequestManager}: LLM Tree Verification time:0.00116632s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   44.063431 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   44.063443 {3}{RequestManager}: Input tree: 42:0 43:8883 44:8883 45:8883 46:8883 47:8883 48:8883 49:8883 50:8883
+[0 - 7fae4d11a000]   44.063452 {3}{RequestManager}: Output tree: 43:0 44:0 45:0 46:0 47:0 48:0 49:0 50:0 51:0
+[0 - 7fae4d11a000]   44.063460 {3}{RequestManager}: Committed tokens: 0:42 1:43 2:44 3:45 4:46 5:47 6:48 7:49 8:50
+[0 - 7fae4d11a000]   44.063466 {3}{RequestManager}: Verified: 43:0
+[0 - 7fae4d11a000]   44.063470 {3}{RequestManager}: New committed: 0:42
+[0 - 7fae4d11a000]   44.063474 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   44.063524 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   44.256710 {3}{RequestManager}: SSMs inference time:0.00329645s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   44.257891 {3}{RequestManager}: LLM Tree Verification time:0.00118769s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   44.257960 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   44.257972 {3}{RequestManager}: Input tree: 43:0 44:8883 45:8883 46:8883 47:8883 48:8883 49:8883 50:8883 51:8883
+[0 - 7fae4d11a000]   44.257981 {3}{RequestManager}: Output tree: 44:0 45:0 46:0 47:0 48:0 49:0 50:0 51:0 52:0
+[0 - 7fae4d11a000]   44.257989 {3}{RequestManager}: Committed tokens: 0:43 1:44 2:45 3:46 4:47 5:48 6:49 7:50 8:51
+[0 - 7fae4d11a000]   44.257995 {3}{RequestManager}: Verified: 44:0
+[0 - 7fae4d11a000]   44.257999 {3}{RequestManager}: New committed: 0:43
+[0 - 7fae4d11a000]   44.258003 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   44.258054 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   44.453823 {3}{RequestManager}: SSMs inference time:0.00331774s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   44.454994 {3}{RequestManager}: LLM Tree Verification time:0.00117835s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   44.455064 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   44.455075 {3}{RequestManager}: Input tree: 44:0 45:8883 46:8883 47:8883 48:8883 49:8883 50:8883 51:8883 52:8883
+[0 - 7fae4d11a000]   44.455084 {3}{RequestManager}: Output tree: 45:0 46:0 47:0 48:0 49:0 50:0 51:0 52:0 53:0
+[0 - 7fae4d11a000]   44.455092 {3}{RequestManager}: Committed tokens: 0:44 1:45 2:46 3:47 4:48 5:49 6:50 7:51 8:52
+[0 - 7fae4d11a000]   44.455097 {3}{RequestManager}: Verified: 45:0
+[0 - 7fae4d11a000]   44.455102 {3}{RequestManager}: New committed: 0:44
+[0 - 7fae4d11a000]   44.455105 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   44.455159 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   44.650928 {3}{RequestManager}: SSMs inference time:0.00354639s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   44.652113 {3}{RequestManager}: LLM Tree Verification time:0.00119212s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   44.652185 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   44.652197 {3}{RequestManager}: Input tree: 45:0 46:8883 47:8883 48:8883 49:8883 50:8883 51:8883 52:8883 53:8883
+[0 - 7fae4d11a000]   44.652205 {3}{RequestManager}: Output tree: 46:0 47:0 48:0 49:0 50:0 51:0 52:0 53:0 54:0
+[0 - 7fae4d11a000]   44.652214 {3}{RequestManager}: Committed tokens: 0:45 1:46 2:47 3:48 4:49 5:50 6:51 7:52 8:53
+[0 - 7fae4d11a000]   44.652220 {3}{RequestManager}: Verified: 46:0
+[0 - 7fae4d11a000]   44.652225 {3}{RequestManager}: New committed: 0:45
+[0 - 7fae4d11a000]   44.652228 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   44.652282 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   44.847171 {3}{RequestManager}: SSMs inference time:0.00328758s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   44.848338 {3}{RequestManager}: LLM Tree Verification time:0.00117342s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   44.848406 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   44.848417 {3}{RequestManager}: Input tree: 46:0 47:8883 48:8883 49:8883 50:8883 51:8883 52:8883 53:8883 54:8883
+[0 - 7fae4d11a000]   44.848426 {3}{RequestManager}: Output tree: 47:0 48:0 49:0 50:0 51:0 52:0 53:0 54:0 55:0
+[0 - 7fae4d11a000]   44.848434 {3}{RequestManager}: Committed tokens: 0:46 1:47 2:48 3:49 4:50 5:51 6:52 7:53 8:54
+[0 - 7fae4d11a000]   44.848441 {3}{RequestManager}: Verified: 47:0
+[0 - 7fae4d11a000]   44.848446 {3}{RequestManager}: New committed: 0:46
+[0 - 7fae4d11a000]   44.848450 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   44.848504 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   45.044534 {3}{RequestManager}: SSMs inference time:0.00326052s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   45.045700 {3}{RequestManager}: LLM Tree Verification time:0.00117174s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   45.045769 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   45.045787 {3}{RequestManager}: Input tree: 47:0 48:8883 49:8883 50:8883 51:8883 52:8883 53:8883 54:8883 55:8883
+[0 - 7fae4d11a000]   45.045801 {3}{RequestManager}: Output tree: 48:0 49:0 50:0 51:0 52:0 53:0 54:0 55:0 56:0
+[0 - 7fae4d11a000]   45.045815 {3}{RequestManager}: Committed tokens: 0:47 1:48 2:49 3:50 4:51 5:52 6:53 7:54 8:55
+[0 - 7fae4d11a000]   45.045824 {3}{RequestManager}: Verified: 48:0
+[0 - 7fae4d11a000]   45.045832 {3}{RequestManager}: New committed: 0:47
+[0 - 7fae4d11a000]   45.045836 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   45.045889 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   45.250791 {3}{RequestManager}: SSMs inference time:0.00340483s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   45.251972 {3}{RequestManager}: LLM Tree Verification time:0.00118993s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   45.252056 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   45.252069 {3}{RequestManager}: Input tree: 48:0 49:8883 50:8883 51:8883 52:8883 53:8883 54:8883 55:8883 56:8883
+[0 - 7fae4d11a000]   45.252078 {3}{RequestManager}: Output tree: 49:0 50:0 51:0 52:0 53:0 54:0 55:0 56:0 57:0
+[0 - 7fae4d11a000]   45.252087 {3}{RequestManager}: Committed tokens: 0:48 1:49 2:50 3:51 4:52 5:53 6:54 7:55 8:56
+[0 - 7fae4d11a000]   45.252093 {3}{RequestManager}: Verified: 49:0
+[0 - 7fae4d11a000]   45.252098 {3}{RequestManager}: New committed: 0:48
+[0 - 7fae4d11a000]   45.252102 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   45.252161 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   45.597006 {3}{RequestManager}: SSMs inference time:0.00147414s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   45.597543 {3}{RequestManager}: LLM Tree Verification time:0.000545599s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   45.597585 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   45.597592 {3}{RequestManager}: Input tree: 49:0 50:8883 51:8883 52:8883 53:8883 54:8883 55:8883 56:8883 57:8883
+[0 - 7fae4d11a000]   45.597596 {3}{RequestManager}: Output tree: 50:0 51:0 52:0 53:0 54:0 55:0 56:0 57:0 58:0
+[0 - 7fae4d11a000]   45.597599 {3}{RequestManager}: Committed tokens: 0:49 1:50 2:51 3:52 4:53 5:54 6:55 7:56 8:57
+[0 - 7fae4d11a000]   45.597602 {3}{RequestManager}: Verified: 50:0
+[0 - 7fae4d11a000]   45.597604 {3}{RequestManager}: New committed: 0:49
+[0 - 7fae4d11a000]   45.597606 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   45.597635 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   45.779626 {3}{RequestManager}: SSMs inference time:0.00338615s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   45.780824 {3}{RequestManager}: LLM Tree Verification time:0.00120669s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   45.780911 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   45.780924 {3}{RequestManager}: Input tree: 50:0 51:8883 52:8883 53:8883 54:8883 55:8883 56:8883 57:8883 58:8883
+[0 - 7fae4d11a000]   45.780935 {3}{RequestManager}: Output tree: 51:0 52:0 53:0 54:0 55:0 56:0 57:0 58:0 59:0
+[0 - 7fae4d11a000]   45.780943 {3}{RequestManager}: Committed tokens: 0:50 1:51 2:52 3:53 4:54 5:55 6:56 7:57 8:58
+[0 - 7fae4d11a000]   45.780950 {3}{RequestManager}: Verified: 51:0
+[0 - 7fae4d11a000]   45.780955 {3}{RequestManager}: New committed: 0:50
+[0 - 7fae4d11a000]   45.780959 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   45.781020 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   45.956876 {3}{RequestManager}: SSMs inference time:0.00334176s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   45.958059 {3}{RequestManager}: LLM Tree Verification time:0.00118913s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   45.958156 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   45.958168 {3}{RequestManager}: Input tree: 51:0 52:8883 53:8883 54:8883 55:8883 56:8883 57:8883 58:8883 59:8883
+[0 - 7fae4d11a000]   45.958177 {3}{RequestManager}: Output tree: 52:0 53:0 54:0 55:0 56:0 57:0 58:0 59:0 60:0
+[0 - 7fae4d11a000]   45.958185 {3}{RequestManager}: Committed tokens: 0:51 1:52 2:53 3:54 4:55 5:56 6:57 7:58 8:59
+[0 - 7fae4d11a000]   45.958191 {3}{RequestManager}: Verified: 52:0
+[0 - 7fae4d11a000]   45.958196 {3}{RequestManager}: New committed: 0:51
+[0 - 7fae4d11a000]   45.958199 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   45.958259 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   46.129605 {3}{RequestManager}: SSMs inference time:0.00331296s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   46.130774 {3}{RequestManager}: LLM Tree Verification time:0.00117489s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   46.130843 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   46.130855 {3}{RequestManager}: Input tree: 52:0 53:8883 54:8883 55:8883 56:8883 57:8883 58:8883 59:8883 60:8883
+[0 - 7fae4d11a000]   46.130863 {3}{RequestManager}: Output tree: 53:0 54:0 55:0 56:0 57:0 58:0 59:0 60:0 61:0
+[0 - 7fae4d11a000]   46.130872 {3}{RequestManager}: Committed tokens: 0:52 1:53 2:54 3:55 4:56 5:57 6:58 7:59 8:60
+[0 - 7fae4d11a000]   46.130878 {3}{RequestManager}: Verified: 53:0
+[0 - 7fae4d11a000]   46.130882 {3}{RequestManager}: New committed: 0:52
+[0 - 7fae4d11a000]   46.130886 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   46.130943 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   46.322557 {3}{RequestManager}: SSMs inference time:0.00355664s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   46.323778 {3}{RequestManager}: LLM Tree Verification time:0.00122961s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   46.323858 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   46.323872 {3}{RequestManager}: Input tree: 53:0 54:8883 55:8883 56:8883 57:8883 58:8883 59:8883 60:8883 61:8883
+[0 - 7fae4d11a000]   46.323882 {3}{RequestManager}: Output tree: 54:0 55:0 56:0 57:0 58:0 59:0 60:0 61:0 62:0
+[0 - 7fae4d11a000]   46.323890 {3}{RequestManager}: Committed tokens: 0:53 1:54 2:55 3:56 4:57 5:58 6:59 7:60 8:61
+[0 - 7fae4d11a000]   46.323897 {3}{RequestManager}: Verified: 54:0
+[0 - 7fae4d11a000]   46.323902 {3}{RequestManager}: New committed: 0:53
+[0 - 7fae4d11a000]   46.323906 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   46.323970 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   46.519110 {3}{RequestManager}: SSMs inference time:0.00341376s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   46.520737 {3}{RequestManager}: LLM Tree Verification time:0.00163502s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   46.520985 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   46.520999 {3}{RequestManager}: Input tree: 54:0 55:8883 56:8883 57:8883 58:8883 59:8883 60:8883 61:8883 62:8883
+[0 - 7fae4d11a000]   46.521007 {3}{RequestManager}: Output tree: 55:0 56:0 57:0 58:0 59:0 60:0 61:0 62:0 63:0
+[0 - 7fae4d11a000]   46.521016 {3}{RequestManager}: Committed tokens: 0:54 1:55 2:56 3:57 4:58 5:59 6:60 7:61 8:62
+[0 - 7fae4d11a000]   46.521022 {3}{RequestManager}: Verified: 55:0
+[0 - 7fae4d11a000]   46.521027 {3}{RequestManager}: New committed: 0:54
+[0 - 7fae4d11a000]   46.521031 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   46.521159 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   46.713584 {3}{RequestManager}: SSMs inference time:0.0033457s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   46.714767 {3}{RequestManager}: LLM Tree Verification time:0.00118903s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   46.714839 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   46.714852 {3}{RequestManager}: Input tree: 55:0 56:8883 57:8883 58:8883 59:8883 60:8883 61:8883 62:8883 63:8883
+[0 - 7fae4d11a000]   46.714862 {3}{RequestManager}: Output tree: 56:0 57:0 58:0 59:0 60:0 61:0 62:0 63:0 64:0
+[0 - 7fae4d11a000]   46.714870 {3}{RequestManager}: Committed tokens: 0:55 1:56 2:57 3:58 4:59 5:60 6:61 7:62 8:63
+[0 - 7fae4d11a000]   46.714876 {3}{RequestManager}: Verified: 56:0
+[0 - 7fae4d11a000]   46.714881 {3}{RequestManager}: New committed: 0:55
+[0 - 7fae4d11a000]   46.714885 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   46.714955 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   47.126655 {3}{RequestManager}: SSMs inference time:0.00238605s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   47.127644 {3}{RequestManager}: LLM Tree Verification time:0.000998702s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   47.127752 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   47.127763 {3}{RequestManager}: Input tree: 56:0 57:8883 58:8883 59:8883 60:8883 61:8883 62:8883 63:8883 64:8883
+[0 - 7fae4d11a000]   47.127770 {3}{RequestManager}: Output tree: 57:0 58:0 59:0 60:0 61:0 62:0 63:0 64:0 65:0
+[0 - 7fae4d11a000]   47.127775 {3}{RequestManager}: Committed tokens: 0:56 1:57 2:58 3:59 4:60 5:61 6:62 7:63 8:64
+[0 - 7fae4d11a000]   47.127780 {3}{RequestManager}: Verified: 57:0
+[0 - 7fae4d11a000]   47.127783 {3}{RequestManager}: New committed: 0:56
+[0 - 7fae4d11a000]   47.127786 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   47.127839 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   47.337161 {3}{RequestManager}: SSMs inference time:0.00360571s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   47.338415 {3}{RequestManager}: LLM Tree Verification time:0.00126825s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   47.338546 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   47.338563 {3}{RequestManager}: Input tree: 57:0 58:8883 59:8883 60:8883 61:8883 62:8883 63:8883 64:8883 65:8883
+[0 - 7fae4d11a000]   47.338573 {3}{RequestManager}: Output tree: 58:0 59:0 60:0 61:0 62:0 63:0 64:0 65:0 66:0
+[0 - 7fae4d11a000]   47.338582 {3}{RequestManager}: Committed tokens: 0:57 1:58 2:59 3:60 4:61 5:62 6:63 7:64 8:65
+[0 - 7fae4d11a000]   47.338589 {3}{RequestManager}: Verified: 58:0
+[0 - 7fae4d11a000]   47.338595 {3}{RequestManager}: New committed: 0:57
+[0 - 7fae4d11a000]   47.338598 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   47.338671 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   47.520448 {3}{RequestManager}: SSMs inference time:0.00335862s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   47.521665 {3}{RequestManager}: LLM Tree Verification time:0.00122551s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   47.521741 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   47.521754 {3}{RequestManager}: Input tree: 58:0 59:8883 60:8883 61:8883 62:8883 63:8883 64:8883 65:8883 66:8883
+[0 - 7fae4d11a000]   47.521764 {3}{RequestManager}: Output tree: 59:0 60:0 61:0 62:0 63:0 64:0 65:0 66:0 67:0
+[0 - 7fae4d11a000]   47.521772 {3}{RequestManager}: Committed tokens: 0:58 1:59 2:60 3:61 4:62 5:63 6:64 7:65 8:66
+[0 - 7fae4d11a000]   47.521779 {3}{RequestManager}: Verified: 59:0
+[0 - 7fae4d11a000]   47.521784 {3}{RequestManager}: New committed: 0:58
+[0 - 7fae4d11a000]   47.521787 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   47.521852 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   47.724048 {3}{RequestManager}: SSMs inference time:0.00343669s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   47.725271 {3}{RequestManager}: LLM Tree Verification time:0.00122946s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   47.725352 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   47.725366 {3}{RequestManager}: Input tree: 59:0 60:8883 61:8883 62:8883 63:8883 64:8883 65:8883 66:8883 67:8883
+[0 - 7fae4d11a000]   47.725375 {3}{RequestManager}: Output tree: 60:0 61:0 62:0 63:0 64:0 65:0 66:0 67:0 68:0
+[0 - 7fae4d11a000]   47.725384 {3}{RequestManager}: Committed tokens: 0:59 1:60 2:61 3:62 4:63 5:64 6:65 7:66 8:67
+[0 - 7fae4d11a000]   47.725390 {3}{RequestManager}: Verified: 60:0
+[0 - 7fae4d11a000]   47.725395 {3}{RequestManager}: New committed: 0:59
+[0 - 7fae4d11a000]   47.725398 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   47.725469 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   47.925401 {3}{RequestManager}: SSMs inference time:0.00334025s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   47.926590 {3}{RequestManager}: LLM Tree Verification time:0.00119618s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   47.926664 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   47.926675 {3}{RequestManager}: Input tree: 60:0 61:8883 62:8883 63:8883 64:8883 65:8883 66:8883 67:8883 68:8883
+[0 - 7fae4d11a000]   47.926685 {3}{RequestManager}: Output tree: 61:0 62:0 63:0 64:0 65:0 66:0 67:0 68:0 69:0
+[0 - 7fae4d11a000]   47.926693 {3}{RequestManager}: Committed tokens: 0:60 1:61 2:62 3:63 4:64 5:65 6:66 7:67 8:68
+[0 - 7fae4d11a000]   47.926700 {3}{RequestManager}: Verified: 61:0
+[0 - 7fae4d11a000]   47.926704 {3}{RequestManager}: New committed: 0:60
+[0 - 7fae4d11a000]   47.926708 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   47.926772 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   48.095816 {3}{RequestManager}: SSMs inference time:0.00340444s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   48.097041 {3}{RequestManager}: LLM Tree Verification time:0.00123024s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   48.097115 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   48.097127 {3}{RequestManager}: Input tree: 61:0 62:8883 63:8883 64:8883 65:8883 66:8883 67:8883 68:8883 69:8883
+[0 - 7fae4d11a000]   48.097136 {3}{RequestManager}: Output tree: 62:0 63:0 64:0 65:0 66:0 67:0 68:0 69:0 70:0
+[0 - 7fae4d11a000]   48.097144 {3}{RequestManager}: Committed tokens: 0:61 1:62 2:63 3:64 4:65 5:66 6:67 7:68 8:69
+[0 - 7fae4d11a000]   48.097150 {3}{RequestManager}: Verified: 62:0
+[0 - 7fae4d11a000]   48.097154 {3}{RequestManager}: New committed: 0:61
+[0 - 7fae4d11a000]   48.097157 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   48.097222 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   48.293631 {3}{RequestManager}: SSMs inference time:0.00339408s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   48.294814 {3}{RequestManager}: LLM Tree Verification time:0.00119193s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   48.294893 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   48.294905 {3}{RequestManager}: Input tree: 62:0 63:8883 64:8883 65:8883 66:8883 67:8883 68:8883 69:8883 70:8883
+[0 - 7fae4d11a000]   48.294915 {3}{RequestManager}: Output tree: 63:0 64:0 65:0 66:0 67:0 68:0 69:0 70:0 71:0
+[0 - 7fae4d11a000]   48.294923 {3}{RequestManager}: Committed tokens: 0:62 1:63 2:64 3:65 4:66 5:67 6:68 7:69 8:70
+[0 - 7fae4d11a000]   48.294930 {3}{RequestManager}: Verified: 63:0
+[0 - 7fae4d11a000]   48.294934 {3}{RequestManager}: New committed: 0:62
+[0 - 7fae4d11a000]   48.294938 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   48.295004 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   48.478636 {3}{RequestManager}: SSMs inference time:0.00334266s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   48.479848 {3}{RequestManager}: LLM Tree Verification time:0.00121889s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   48.479925 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   48.479938 {3}{RequestManager}: Input tree: 63:0 64:8883 65:8883 66:8883 67:8883 68:8883 69:8883 70:8883 71:8883
+[0 - 7fae4d11a000]   48.479947 {3}{RequestManager}: Output tree: 64:0 65:0 66:0 67:0 68:0 69:0 70:0 71:0 72:0
+[0 - 7fae4d11a000]   48.479955 {3}{RequestManager}: Committed tokens: 0:63 1:64 2:65 3:66 4:67 5:68 6:69 7:70 8:71
+[0 - 7fae4d11a000]   48.479961 {3}{RequestManager}: Verified: 64:0
+[0 - 7fae4d11a000]   48.479966 {3}{RequestManager}: New committed: 0:63
+[0 - 7fae4d11a000]   48.479970 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   48.480037 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   48.656646 {3}{RequestManager}: SSMs inference time:0.00333051s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   48.657818 {3}{RequestManager}: LLM Tree Verification time:0.00117958s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   48.657893 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   48.657904 {3}{RequestManager}: Input tree: 64:0 65:8883 66:8883 67:8883 68:8883 69:8883 70:8883 71:8883 72:8883
+[0 - 7fae4d11a000]   48.657913 {3}{RequestManager}: Output tree: 65:0 66:0 67:0 68:0 69:0 70:0 71:0 72:0 73:0
+[0 - 7fae4d11a000]   48.657921 {3}{RequestManager}: Committed tokens: 0:64 1:65 2:66 3:67 4:68 5:69 6:70 7:71 8:72
+[0 - 7fae4d11a000]   48.657928 {3}{RequestManager}: Verified: 65:0
+[0 - 7fae4d11a000]   48.657932 {3}{RequestManager}: New committed: 0:64
+[0 - 7fae4d11a000]   48.657936 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   48.658001 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   48.853005 {3}{RequestManager}: SSMs inference time:0.00350527s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   48.854213 {3}{RequestManager}: LLM Tree Verification time:0.00121807s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   48.854296 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   48.854310 {3}{RequestManager}: Input tree: 65:0 66:8883 67:8883 68:8883 69:8883 70:8883 71:8883 72:8883 73:8883
+[0 - 7fae4d11a000]   48.854319 {3}{RequestManager}: Output tree: 66:0 67:0 68:0 69:0 70:0 71:0 72:0 73:0 74:0
+[0 - 7fae4d11a000]   48.854328 {3}{RequestManager}: Committed tokens: 0:65 1:66 2:67 3:68 4:69 5:70 6:71 7:72 8:73
+[0 - 7fae4d11a000]   48.854334 {3}{RequestManager}: Verified: 66:0
+[0 - 7fae4d11a000]   48.854339 {3}{RequestManager}: New committed: 0:65
+[0 - 7fae4d11a000]   48.854343 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   48.854413 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   49.021538 {3}{RequestManager}: SSMs inference time:0.00341584s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   49.022718 {3}{RequestManager}: LLM Tree Verification time:0.00118724s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   49.022795 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   49.022808 {3}{RequestManager}: Input tree: 66:0 67:8883 68:8883 69:8883 70:8883 71:8883 72:8883 73:8883 74:8883
+[0 - 7fae4d11a000]   49.022818 {3}{RequestManager}: Output tree: 67:0 68:0 69:0 70:0 71:0 72:0 73:0 74:0 75:0
+[0 - 7fae4d11a000]   49.022826 {3}{RequestManager}: Committed tokens: 0:66 1:67 2:68 3:69 4:70 5:71 6:72 7:73 8:74
+[0 - 7fae4d11a000]   49.022833 {3}{RequestManager}: Verified: 67:0
+[0 - 7fae4d11a000]   49.022838 {3}{RequestManager}: New committed: 0:66
+[0 - 7fae4d11a000]   49.022841 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   49.022913 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   49.215543 {3}{RequestManager}: SSMs inference time:0.00357243s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   49.216764 {3}{RequestManager}: LLM Tree Verification time:0.00122812s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   49.216842 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   49.216855 {3}{RequestManager}: Input tree: 67:0 68:8883 69:8883 70:8883 71:8883 72:8883 73:8883 74:8883 75:8883
+[0 - 7fae4d11a000]   49.216863 {3}{RequestManager}: Output tree: 68:0 69:0 70:0 71:0 72:0 73:0 74:0 75:0 76:0
+[0 - 7fae4d11a000]   49.216871 {3}{RequestManager}: Committed tokens: 0:67 1:68 2:69 3:70 4:71 5:72 6:73 7:74 8:75
+[0 - 7fae4d11a000]   49.216878 {3}{RequestManager}: Verified: 68:0
+[0 - 7fae4d11a000]   49.216882 {3}{RequestManager}: New committed: 0:67
+[0 - 7fae4d11a000]   49.216886 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   49.216958 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   49.364610 {3}{RequestManager}: SSMs inference time:0.00356345s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   49.365825 {3}{RequestManager}: LLM Tree Verification time:0.00122106s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   49.365917 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   49.365930 {3}{RequestManager}: Input tree: 68:0 69:8883 70:8883 71:8883 72:8883 73:8883 74:8883 75:8883 76:8883
+[0 - 7fae4d11a000]   49.365940 {3}{RequestManager}: Output tree: 69:0 70:0 71:0 72:0 73:0 74:0 75:0 76:0 77:0
+[0 - 7fae4d11a000]   49.365948 {3}{RequestManager}: Committed tokens: 0:68 1:69 2:70 3:71 4:72 5:73 6:74 7:75 8:76
+[0 - 7fae4d11a000]   49.365954 {3}{RequestManager}: Verified: 69:0
+[0 - 7fae4d11a000]   49.365959 {3}{RequestManager}: New committed: 0:68
+[0 - 7fae4d11a000]   49.365962 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   49.366031 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   49.517759 {3}{RequestManager}: SSMs inference time:0.00347803s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   49.518985 {3}{RequestManager}: LLM Tree Verification time:0.00123265s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   49.519057 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   49.519068 {3}{RequestManager}: Input tree: 69:0 70:8883 71:8883 72:8883 73:8883 74:8883 75:8883 76:8883 77:8883
+[0 - 7fae4d11a000]   49.519077 {3}{RequestManager}: Output tree: 70:0 71:0 72:0 73:0 74:0 75:0 76:0 77:0 78:0
+[0 - 7fae4d11a000]   49.519085 {3}{RequestManager}: Committed tokens: 0:69 1:70 2:71 3:72 4:73 5:74 6:75 7:76 8:77
+[0 - 7fae4d11a000]   49.519090 {3}{RequestManager}: Verified: 70:0
+[0 - 7fae4d11a000]   49.519095 {3}{RequestManager}: New committed: 0:69
+[0 - 7fae4d11a000]   49.519098 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   49.519168 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   49.716586 {3}{RequestManager}: SSMs inference time:0.00353115s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   49.717802 {3}{RequestManager}: LLM Tree Verification time:0.00122273s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   49.717879 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   49.717891 {3}{RequestManager}: Input tree: 70:0 71:8883 72:8883 73:8883 74:8883 75:8883 76:8883 77:8883 78:8883
+[0 - 7fae4d11a000]   49.717900 {3}{RequestManager}: Output tree: 71:0 72:0 73:0 74:0 75:0 76:0 77:0 78:0 79:0
+[0 - 7fae4d11a000]   49.717908 {3}{RequestManager}: Committed tokens: 0:70 1:71 2:72 3:73 4:74 5:75 6:76 7:77 8:78
+[0 - 7fae4d11a000]   49.717913 {3}{RequestManager}: Verified: 71:0
+[0 - 7fae4d11a000]   49.717918 {3}{RequestManager}: New committed: 0:70
+[0 - 7fae4d11a000]   49.717922 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   49.717994 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   49.921524 {3}{RequestManager}: SSMs inference time:0.00338438s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   49.922700 {3}{RequestManager}: LLM Tree Verification time:0.00118439s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   49.922794 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   49.922806 {3}{RequestManager}: Input tree: 71:0 72:8883 73:8883 74:8883 75:8883 76:8883 77:8883 78:8883 79:8883
+[0 - 7fae4d11a000]   49.922814 {3}{RequestManager}: Output tree: 72:0 73:0 74:0 75:0 76:0 77:0 78:0 79:0 80:0
+[0 - 7fae4d11a000]   49.922823 {3}{RequestManager}: Committed tokens: 0:71 1:72 2:73 3:74 4:75 5:76 6:77 7:78 8:79
+[0 - 7fae4d11a000]   49.922829 {3}{RequestManager}: Verified: 72:0
+[0 - 7fae4d11a000]   49.922833 {3}{RequestManager}: New committed: 0:71
+[0 - 7fae4d11a000]   49.922837 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   49.922911 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   50.119140 {3}{RequestManager}: SSMs inference time:0.00335308s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   50.120841 {3}{RequestManager}: LLM Tree Verification time:0.00170772s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   50.120921 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   50.120932 {3}{RequestManager}: Input tree: 72:0 73:8883 74:8883 75:8883 76:8883 77:8883 78:8883 79:8883 80:8883
+[0 - 7fae4d11a000]   50.120941 {3}{RequestManager}: Output tree: 73:0 74:0 75:0 76:0 77:0 78:0 79:0 80:0 81:0
+[0 - 7fae4d11a000]   50.120949 {3}{RequestManager}: Committed tokens: 0:72 1:73 2:74 3:75 4:76 5:77 6:78 7:79 8:80
+[0 - 7fae4d11a000]   50.120955 {3}{RequestManager}: Verified: 73:0
+[0 - 7fae4d11a000]   50.120959 {3}{RequestManager}: New committed: 0:72
+[0 - 7fae4d11a000]   50.120962 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   50.121038 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   50.325989 {3}{RequestManager}: SSMs inference time:0.00383209s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   50.327254 {3}{RequestManager}: LLM Tree Verification time:0.00127135s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   50.327331 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   50.327343 {3}{RequestManager}: Input tree: 73:0 74:8883 75:8883 76:8883 77:8883 78:8883 79:8883 80:8883 81:8883
+[0 - 7fae4d11a000]   50.327352 {3}{RequestManager}: Output tree: 74:0 75:0 76:0 77:0 78:0 79:0 80:0 81:0 82:0
+[0 - 7fae4d11a000]   50.327360 {3}{RequestManager}: Committed tokens: 0:73 1:74 2:75 3:76 4:77 5:78 6:79 7:80 8:81
+[0 - 7fae4d11a000]   50.327366 {3}{RequestManager}: Verified: 74:0
+[0 - 7fae4d11a000]   50.327371 {3}{RequestManager}: New committed: 0:73
+[0 - 7fae4d11a000]   50.327374 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   50.327448 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   50.519889 {3}{RequestManager}: SSMs inference time:0.00336298s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   50.521063 {3}{RequestManager}: LLM Tree Verification time:0.00118223s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   50.521139 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   50.521151 {3}{RequestManager}: Input tree: 74:0 75:8883 76:8883 77:8883 78:8883 79:8883 80:8883 81:8883 82:8883
+[0 - 7fae4d11a000]   50.521160 {3}{RequestManager}: Output tree: 75:0 76:0 77:0 78:0 79:0 80:0 81:0 82:0 83:0
+[0 - 7fae4d11a000]   50.521169 {3}{RequestManager}: Committed tokens: 0:74 1:75 2:76 3:77 4:78 5:79 6:80 7:81 8:82
+[0 - 7fae4d11a000]   50.521175 {3}{RequestManager}: Verified: 75:0
+[0 - 7fae4d11a000]   50.521179 {3}{RequestManager}: New committed: 0:74
+[0 - 7fae4d11a000]   50.521183 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   50.521259 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   50.720320 {3}{RequestManager}: SSMs inference time:0.0033714s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   50.721496 {3}{RequestManager}: LLM Tree Verification time:0.00118237s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   50.721567 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   50.721579 {3}{RequestManager}: Input tree: 75:0 76:8883 77:8883 78:8883 79:8883 80:8883 81:8883 82:8883 83:8883
+[0 - 7fae4d11a000]   50.721588 {3}{RequestManager}: Output tree: 76:0 77:0 78:0 79:0 80:0 81:0 82:0 83:0 84:0
+[0 - 7fae4d11a000]   50.721596 {3}{RequestManager}: Committed tokens: 0:75 1:76 2:77 3:78 4:79 5:80 6:81 7:82 8:83
+[0 - 7fae4d11a000]   50.721602 {3}{RequestManager}: Verified: 76:0
+[0 - 7fae4d11a000]   50.721607 {3}{RequestManager}: New committed: 0:75
+[0 - 7fae4d11a000]   50.721610 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   50.721684 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   50.888655 {3}{RequestManager}: SSMs inference time:0.00345367s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   50.889850 {3}{RequestManager}: LLM Tree Verification time:0.00120491s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   50.889934 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   50.889948 {3}{RequestManager}: Input tree: 76:0 77:8883 78:8883 79:8883 80:8883 81:8883 82:8883 83:8883 84:8883
+[0 - 7fae4d11a000]   50.889958 {3}{RequestManager}: Output tree: 77:0 78:0 79:0 80:0 81:0 82:0 83:0 84:0 85:0
+[0 - 7fae4d11a000]   50.889967 {3}{RequestManager}: Committed tokens: 0:76 1:77 2:78 3:79 4:80 5:81 6:82 7:83 8:84
+[0 - 7fae4d11a000]   50.889974 {3}{RequestManager}: Verified: 77:0
+[0 - 7fae4d11a000]   50.889979 {3}{RequestManager}: New committed: 0:76
+[0 - 7fae4d11a000]   50.889982 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   50.890059 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   51.060747 {3}{RequestManager}: SSMs inference time:0.00461422s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   51.062635 {3}{RequestManager}: LLM Tree Verification time:0.00189519s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   51.062746 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   51.062759 {3}{RequestManager}: Input tree: 77:0 78:8883 79:8883 80:8883 81:8883 82:8883 83:8883 84:8883 85:8883
+[0 - 7fae4d11a000]   51.062768 {3}{RequestManager}: Output tree: 78:0 79:0 80:0 81:0 82:0 83:0 84:0 85:0 86:0
+[0 - 7fae4d11a000]   51.062777 {3}{RequestManager}: Committed tokens: 0:77 1:78 2:79 3:80 4:81 5:82 6:83 7:84 8:85
+[0 - 7fae4d11a000]   51.062784 {3}{RequestManager}: Verified: 78:0
+[0 - 7fae4d11a000]   51.062788 {3}{RequestManager}: New committed: 0:77
+[0 - 7fae4d11a000]   51.062792 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   51.062935 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   51.192105 {3}{RequestManager}: SSMs inference time:0.00344395s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   51.193291 {3}{RequestManager}: LLM Tree Verification time:0.00119655s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   51.193375 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   51.193390 {3}{RequestManager}: Input tree: 78:0 79:8883 80:8883 81:8883 82:8883 83:8883 84:8883 85:8883 86:8883
+[0 - 7fae4d11a000]   51.193401 {3}{RequestManager}: Output tree: 79:0 80:0 81:0 82:0 83:0 84:0 85:0 86:0 87:0
+[0 - 7fae4d11a000]   51.193410 {3}{RequestManager}: Committed tokens: 0:78 1:79 2:80 3:81 4:82 5:83 6:84 7:85 8:86
+[0 - 7fae4d11a000]   51.193417 {3}{RequestManager}: Verified: 79:0
+[0 - 7fae4d11a000]   51.193422 {3}{RequestManager}: New committed: 0:78
+[0 - 7fae4d11a000]   51.193426 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   51.193510 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   51.337716 {3}{RequestManager}: SSMs inference time:0.00337824s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   51.338910 {3}{RequestManager}: LLM Tree Verification time:0.00120169s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   51.339009 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   51.339022 {3}{RequestManager}: Input tree: 79:0 80:8883 81:8883 82:8883 83:8883 84:8883 85:8883 86:8883 87:8883
+[0 - 7fae4d11a000]   51.339032 {3}{RequestManager}: Output tree: 80:0 81:0 82:0 83:0 84:0 85:0 86:0 87:0 88:0
+[0 - 7fae4d11a000]   51.339041 {3}{RequestManager}: Committed tokens: 0:79 1:80 2:81 3:82 4:83 5:84 6:85 7:86 8:87
+[0 - 7fae4d11a000]   51.339047 {3}{RequestManager}: Verified: 80:0
+[0 - 7fae4d11a000]   51.339053 {3}{RequestManager}: New committed: 0:79
+[0 - 7fae4d11a000]   51.339056 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   51.339138 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   51.488429 {3}{RequestManager}: SSMs inference time:0.00337063s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   51.489602 {3}{RequestManager}: LLM Tree Verification time:0.0011806s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   51.489678 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   51.489691 {3}{RequestManager}: Input tree: 80:0 81:8883 82:8883 83:8883 84:8883 85:8883 86:8883 87:8883 88:8883
+[0 - 7fae4d11a000]   51.489700 {3}{RequestManager}: Output tree: 81:0 82:0 83:0 84:0 85:0 86:0 87:0 88:0 89:0
+[0 - 7fae4d11a000]   51.489708 {3}{RequestManager}: Committed tokens: 0:80 1:81 2:82 3:83 4:84 5:85 6:86 7:87 8:88
+[0 - 7fae4d11a000]   51.489715 {3}{RequestManager}: Verified: 81:0
+[0 - 7fae4d11a000]   51.489720 {3}{RequestManager}: New committed: 0:80
+[0 - 7fae4d11a000]   51.489723 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   51.489802 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   51.641570 {3}{RequestManager}: SSMs inference time:0.00342241s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   51.642785 {3}{RequestManager}: LLM Tree Verification time:0.00122285s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   51.642859 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   51.642871 {3}{RequestManager}: Input tree: 81:0 82:8883 83:8883 84:8883 85:8883 86:8883 87:8883 88:8883 89:8883
+[0 - 7fae4d11a000]   51.642881 {3}{RequestManager}: Output tree: 82:0 83:0 84:0 85:0 86:0 87:0 88:0 89:0 90:0
+[0 - 7fae4d11a000]   51.642889 {3}{RequestManager}: Committed tokens: 0:81 1:82 2:83 3:84 4:85 5:86 6:87 7:88 8:89
+[0 - 7fae4d11a000]   51.642895 {3}{RequestManager}: Verified: 82:0
+[0 - 7fae4d11a000]   51.642900 {3}{RequestManager}: New committed: 0:81
+[0 - 7fae4d11a000]   51.642904 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   51.642985 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   51.836974 {3}{RequestManager}: SSMs inference time:0.00337206s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   51.838479 {3}{RequestManager}: LLM Tree Verification time:0.00151489s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   51.838559 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   51.838572 {3}{RequestManager}: Input tree: 82:0 83:8883 84:8883 85:8883 86:8883 87:8883 88:8883 89:8883 90:8883
+[0 - 7fae4d11a000]   51.838581 {3}{RequestManager}: Output tree: 83:0 84:0 85:0 86:0 87:0 88:0 89:0 90:0 91:0
+[0 - 7fae4d11a000]   51.838589 {3}{RequestManager}: Committed tokens: 0:82 1:83 2:84 3:85 4:86 5:87 6:88 7:89 8:90
+[0 - 7fae4d11a000]   51.838595 {3}{RequestManager}: Verified: 83:0
+[0 - 7fae4d11a000]   51.838600 {3}{RequestManager}: New committed: 0:82
+[0 - 7fae4d11a000]   51.838603 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   51.838685 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   52.007461 {3}{RequestManager}: SSMs inference time:0.00338099s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   52.008650 {3}{RequestManager}: LLM Tree Verification time:0.00119587s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   52.008724 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   52.008737 {3}{RequestManager}: Input tree: 83:0 84:8883 85:8883 86:8883 87:8883 88:8883 89:8883 90:8883 91:8883
+[0 - 7fae4d11a000]   52.008746 {3}{RequestManager}: Output tree: 84:0 85:0 86:0 87:0 88:0 89:0 90:0 91:0 92:0
+[0 - 7fae4d11a000]   52.008754 {3}{RequestManager}: Committed tokens: 0:83 1:84 2:85 3:86 4:87 5:88 6:89 7:90 8:91
+[0 - 7fae4d11a000]   52.008760 {3}{RequestManager}: Verified: 84:0
+[0 - 7fae4d11a000]   52.008764 {3}{RequestManager}: New committed: 0:83
+[0 - 7fae4d11a000]   52.008768 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   52.008848 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   52.206392 {3}{RequestManager}: SSMs inference time:0.0034353s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   52.207594 {3}{RequestManager}: LLM Tree Verification time:0.00120904s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   52.207670 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   52.207682 {3}{RequestManager}: Input tree: 84:0 85:8883 86:8883 87:8883 88:8883 89:8883 90:8883 91:8883 92:8883
+[0 - 7fae4d11a000]   52.207690 {3}{RequestManager}: Output tree: 85:0 86:0 87:0 88:0 89:0 90:0 91:0 92:0 93:0
+[0 - 7fae4d11a000]   52.207699 {3}{RequestManager}: Committed tokens: 0:84 1:85 2:86 3:87 4:88 5:89 6:90 7:91 8:92
+[0 - 7fae4d11a000]   52.207704 {3}{RequestManager}: Verified: 85:0
+[0 - 7fae4d11a000]   52.207709 {3}{RequestManager}: New committed: 0:84
+[0 - 7fae4d11a000]   52.207712 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   52.207792 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   52.376104 {3}{RequestManager}: SSMs inference time:0.00343691s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   52.377313 {3}{RequestManager}: LLM Tree Verification time:0.00121633s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   52.377388 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   52.377400 {3}{RequestManager}: Input tree: 85:0 86:8883 87:8883 88:8883 89:8883 90:8883 91:8883 92:8883 93:8883
+[0 - 7fae4d11a000]   52.377410 {3}{RequestManager}: Output tree: 86:0 87:0 88:0 89:0 90:0 91:0 92:0 93:0 94:0
+[0 - 7fae4d11a000]   52.377418 {3}{RequestManager}: Committed tokens: 0:85 1:86 2:87 3:88 4:89 5:90 6:91 7:92 8:93
+[0 - 7fae4d11a000]   52.377425 {3}{RequestManager}: Verified: 86:0
+[0 - 7fae4d11a000]   52.377429 {3}{RequestManager}: New committed: 0:85
+[0 - 7fae4d11a000]   52.377433 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   52.377515 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   52.568527 {3}{RequestManager}: SSMs inference time:0.00576572s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   52.569752 {3}{RequestManager}: LLM Tree Verification time:0.00124957s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   52.569837 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   52.569849 {3}{RequestManager}: Input tree: 86:0 87:8883 88:8883 89:8883 90:8883 91:8883 92:8883 93:8883 94:8883
+[0 - 7fae4d11a000]   52.569858 {3}{RequestManager}: Output tree: 87:0 88:0 89:0 90:0 91:0 92:0 93:0 94:0 95:0
+[0 - 7fae4d11a000]   52.569866 {3}{RequestManager}: Committed tokens: 0:86 1:87 2:88 3:89 4:90 5:91 6:92 7:93 8:94
+[0 - 7fae4d11a000]   52.569872 {3}{RequestManager}: Verified: 87:0
+[0 - 7fae4d11a000]   52.569876 {3}{RequestManager}: New committed: 0:86
+[0 - 7fae4d11a000]   52.569880 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   52.569966 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   52.757851 {3}{RequestManager}: SSMs inference time:0.00346579s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   52.759088 {3}{RequestManager}: LLM Tree Verification time:0.00124871s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   52.759170 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   52.759186 {3}{RequestManager}: Input tree: 87:0 88:8883 89:8883 90:8883 91:8883 92:8883 93:8883 94:8883 95:8883
+[0 - 7fae4d11a000]   52.759197 {3}{RequestManager}: Output tree: 88:0 89:0 90:0 91:0 92:0 93:0 94:0 95:0 96:0
+[0 - 7fae4d11a000]   52.759206 {3}{RequestManager}: Committed tokens: 0:87 1:88 2:89 3:90 4:91 5:92 6:93 7:94 8:95
+[0 - 7fae4d11a000]   52.759213 {3}{RequestManager}: Verified: 88:0
+[0 - 7fae4d11a000]   52.759218 {3}{RequestManager}: New committed: 0:87
+[0 - 7fae4d11a000]   52.759222 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   52.759314 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   52.950644 {3}{RequestManager}: SSMs inference time:0.00341026s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   52.951845 {3}{RequestManager}: LLM Tree Verification time:0.00121208s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   52.951930 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   52.951945 {3}{RequestManager}: Input tree: 88:0 89:8883 90:8883 91:8883 92:8883 93:8883 94:8883 95:8883 96:8883
+[0 - 7fae4d11a000]   52.951955 {3}{RequestManager}: Output tree: 89:0 90:0 91:0 92:0 93:0 94:0 95:0 96:0 97:0
+[0 - 7fae4d11a000]   52.951964 {3}{RequestManager}: Committed tokens: 0:88 1:89 2:90 3:91 4:92 5:93 6:94 7:95 8:96
+[0 - 7fae4d11a000]   52.951972 {3}{RequestManager}: Verified: 89:0
+[0 - 7fae4d11a000]   52.951977 {3}{RequestManager}: New committed: 0:88
+[0 - 7fae4d11a000]   52.951981 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   52.952080 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   53.142619 {3}{RequestManager}: SSMs inference time:0.00342099s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   53.143818 {3}{RequestManager}: LLM Tree Verification time:0.00120762s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   53.143894 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   53.143907 {3}{RequestManager}: Input tree: 89:0 90:8883 91:8883 92:8883 93:8883 94:8883 95:8883 96:8883 97:8883
+[0 - 7fae4d11a000]   53.143916 {3}{RequestManager}: Output tree: 90:0 91:0 92:0 93:0 94:0 95:0 96:0 97:0 98:0
+[0 - 7fae4d11a000]   53.143924 {3}{RequestManager}: Committed tokens: 0:89 1:90 2:91 3:92 4:93 5:94 6:95 7:96 8:97
+[0 - 7fae4d11a000]   53.143931 {3}{RequestManager}: Verified: 90:0
+[0 - 7fae4d11a000]   53.143937 {3}{RequestManager}: New committed: 0:89
+[0 - 7fae4d11a000]   53.143941 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   53.144028 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   53.290937 {3}{RequestManager}: SSMs inference time:0.00350679s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   53.292140 {3}{RequestManager}: LLM Tree Verification time:0.00121056s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   53.292223 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   53.292236 {3}{RequestManager}: Input tree: 90:0 91:8883 92:8883 93:8883 94:8883 95:8883 96:8883 97:8883 98:8883
+[0 - 7fae4d11a000]   53.292245 {3}{RequestManager}: Output tree: 91:0 92:0 93:0 94:0 95:0 96:0 97:0 98:0 99:0
+[0 - 7fae4d11a000]   53.292253 {3}{RequestManager}: Committed tokens: 0:90 1:91 2:92 3:93 4:94 5:95 6:96 7:97 8:98
+[0 - 7fae4d11a000]   53.292260 {3}{RequestManager}: Verified: 91:0
+[0 - 7fae4d11a000]   53.292265 {3}{RequestManager}: New committed: 0:90
+[0 - 7fae4d11a000]   53.292269 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   53.292356 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   53.439357 {3}{RequestManager}: SSMs inference time:0.00339191s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   53.440546 {3}{RequestManager}: LLM Tree Verification time:0.00119674s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   53.440622 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   53.440634 {3}{RequestManager}: Input tree: 91:0 92:8883 93:8883 94:8883 95:8883 96:8883 97:8883 98:8883 99:8883
+[0 - 7fae4d11a000]   53.440643 {3}{RequestManager}: Output tree: 92:0 93:0 94:0 95:0 96:0 97:0 98:0 99:0 100:0
+[0 - 7fae4d11a000]   53.440651 {3}{RequestManager}: Committed tokens: 0:91 1:92 2:93 3:94 4:95 5:96 6:97 7:98 8:99
+[0 - 7fae4d11a000]   53.440657 {3}{RequestManager}: Verified: 92:0
+[0 - 7fae4d11a000]   53.440662 {3}{RequestManager}: New committed: 0:91
+[0 - 7fae4d11a000]   53.440666 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   53.440751 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   53.617751 {3}{RequestManager}: SSMs inference time:0.0034624s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   53.618949 {3}{RequestManager}: LLM Tree Verification time:0.00120494s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   53.619021 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   53.619033 {3}{RequestManager}: Input tree: 92:0 93:8883 94:8883 95:8883 96:8883 97:8883 98:8883 99:8883 100:8883
+[0 - 7fae4d11a000]   53.619042 {3}{RequestManager}: Output tree: 93:0 94:0 95:0 96:0 97:0 98:0 99:0 100:0 101:0
+[0 - 7fae4d11a000]   53.619051 {3}{RequestManager}: Committed tokens: 0:92 1:93 2:94 3:95 4:96 5:97 6:98 7:99 8:100
+[0 - 7fae4d11a000]   53.619058 {3}{RequestManager}: Verified: 93:0
+[0 - 7fae4d11a000]   53.619063 {3}{RequestManager}: New committed: 0:92
+[0 - 7fae4d11a000]   53.619066 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   53.619154 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   53.811109 {3}{RequestManager}: SSMs inference time:0.00346792s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   53.812328 {3}{RequestManager}: LLM Tree Verification time:0.00122858s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   53.812416 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   53.812429 {3}{RequestManager}: Input tree: 93:0 94:8883 95:8883 96:8883 97:8883 98:8883 99:8883 100:8883 101:8883
+[0 - 7fae4d11a000]   53.812439 {3}{RequestManager}: Output tree: 94:0 95:0 96:0 97:0 98:0 99:0 100:0 101:0 102:0
+[0 - 7fae4d11a000]   53.812447 {3}{RequestManager}: Committed tokens: 0:93 1:94 2:95 3:96 4:97 5:98 6:99 7:100 8:101
+[0 - 7fae4d11a000]   53.812453 {3}{RequestManager}: Verified: 94:0
+[0 - 7fae4d11a000]   53.812458 {3}{RequestManager}: New committed: 0:93
+[0 - 7fae4d11a000]   53.812462 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   53.812552 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   53.974030 {3}{RequestManager}: SSMs inference time:0.00336824s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   53.975213 {3}{RequestManager}: LLM Tree Verification time:0.0011914s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   53.975286 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   53.975298 {3}{RequestManager}: Input tree: 94:0 95:8883 96:8883 97:8883 98:8883 99:8883 100:8883 101:8883 102:8883
+[0 - 7fae4d11a000]   53.975307 {3}{RequestManager}: Output tree: 95:0 96:0 97:0 98:0 99:0 100:0 101:0 102:0 103:0
+[0 - 7fae4d11a000]   53.975316 {3}{RequestManager}: Committed tokens: 0:94 1:95 2:96 3:97 4:98 5:99 6:100 7:101 8:102
+[0 - 7fae4d11a000]   53.975322 {3}{RequestManager}: Verified: 95:0
+[0 - 7fae4d11a000]   53.975327 {3}{RequestManager}: New committed: 0:94
+[0 - 7fae4d11a000]   53.975330 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   53.975417 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   54.168273 {3}{RequestManager}: SSMs inference time:0.00339655s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   54.169473 {3}{RequestManager}: LLM Tree Verification time:0.00120683s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   54.169567 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   54.169580 {3}{RequestManager}: Input tree: 95:0 96:8883 97:8883 98:8883 99:8883 100:8883 101:8883 102:8883 103:8883
+[0 - 7fae4d11a000]   54.169589 {3}{RequestManager}: Output tree: 96:0 97:0 98:0 99:0 100:0 101:0 102:0 103:0 104:0
+[0 - 7fae4d11a000]   54.169598 {3}{RequestManager}: Committed tokens: 0:95 1:96 2:97 3:98 4:99 5:100 6:101 7:102 8:103
+[0 - 7fae4d11a000]   54.169604 {3}{RequestManager}: Verified: 96:0
+[0 - 7fae4d11a000]   54.169609 {3}{RequestManager}: New committed: 0:95
+[0 - 7fae4d11a000]   54.169613 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   54.169700 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   54.336714 {3}{RequestManager}: SSMs inference time:0.00336258s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   54.337937 {3}{RequestManager}: LLM Tree Verification time:0.00122823s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   54.338010 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   54.338022 {3}{RequestManager}: Input tree: 96:0 97:8883 98:8883 99:8883 100:8883 101:8883 102:8883 103:8883 104:8883
+[0 - 7fae4d11a000]   54.338031 {3}{RequestManager}: Output tree: 97:0 98:0 99:0 100:0 101:0 102:0 103:0 104:0 105:0
+[0 - 7fae4d11a000]   54.338040 {3}{RequestManager}: Committed tokens: 0:96 1:97 2:98 3:99 4:100 5:101 6:102 7:103 8:104
+[0 - 7fae4d11a000]   54.338046 {3}{RequestManager}: Verified: 97:0
+[0 - 7fae4d11a000]   54.338051 {3}{RequestManager}: New committed: 0:96
+[0 - 7fae4d11a000]   54.338055 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   54.338142 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   54.503908 {3}{RequestManager}: SSMs inference time:0.00377764s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   54.505174 {3}{RequestManager}: LLM Tree Verification time:0.00127314s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   54.505257 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   54.505269 {3}{RequestManager}: Input tree: 97:0 98:8883 99:8883 100:8883 101:8883 102:8883 103:8883 104:8883 105:8883
+[0 - 7fae4d11a000]   54.505278 {3}{RequestManager}: Output tree: 98:0 99:0 100:0 101:0 102:0 103:0 104:0 105:0 106:0
+[0 - 7fae4d11a000]   54.505287 {3}{RequestManager}: Committed tokens: 0:97 1:98 2:99 3:100 4:101 5:102 6:103 7:104 8:105
+[0 - 7fae4d11a000]   54.505293 {3}{RequestManager}: Verified: 98:0
+[0 - 7fae4d11a000]   54.505298 {3}{RequestManager}: New committed: 0:97
+[0 - 7fae4d11a000]   54.505302 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   54.505398 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   54.653071 {3}{RequestManager}: SSMs inference time:0.00359602s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   54.654323 {3}{RequestManager}: LLM Tree Verification time:0.00125824s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   54.654396 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   54.654408 {3}{RequestManager}: Input tree: 98:0 99:8883 100:8883 101:8883 102:8883 103:8883 104:8883 105:8883 106:8883
+[0 - 7fae4d11a000]   54.654417 {3}{RequestManager}: Output tree: 99:0 100:0 101:0 102:0 103:0 104:0 105:0 106:0 107:0
+[0 - 7fae4d11a000]   54.654425 {3}{RequestManager}: Committed tokens: 0:98 1:99 2:100 3:101 4:102 5:103 6:104 7:105 8:106
+[0 - 7fae4d11a000]   54.654431 {3}{RequestManager}: Verified: 99:0
+[0 - 7fae4d11a000]   54.654436 {3}{RequestManager}: New committed: 0:98
+[0 - 7fae4d11a000]   54.654440 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   54.654529 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   54.806962 {3}{RequestManager}: SSMs inference time:0.00362123s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   54.808200 {3}{RequestManager}: LLM Tree Verification time:0.00124788s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   54.808286 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   54.808299 {3}{RequestManager}: Input tree: 99:0 100:8883 101:8883 102:8883 103:8883 104:8883 105:8883 106:8883 107:8883
+[0 - 7fae4d11a000]   54.808308 {3}{RequestManager}: Output tree: 100:0 101:0 102:0 103:0 104:0 105:0 106:0 107:0 108:0
+[0 - 7fae4d11a000]   54.808316 {3}{RequestManager}: Committed tokens: 0:99 1:100 2:101 3:102 4:103 5:104 6:105 7:106 8:107
+[0 - 7fae4d11a000]   54.808322 {3}{RequestManager}: Verified: 100:0
+[0 - 7fae4d11a000]   54.808327 {3}{RequestManager}: New committed: 0:99
+[0 - 7fae4d11a000]   54.808331 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   54.808420 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   55.006870 {3}{RequestManager}: SSMs inference time:0.0036056s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   55.008109 {3}{RequestManager}: LLM Tree Verification time:0.00124654s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   55.008185 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   55.008198 {3}{RequestManager}: Input tree: 100:0 101:8883 102:8883 103:8883 104:8883 105:8883 106:8883 107:8883 108:8883
+[0 - 7fae4d11a000]   55.008207 {3}{RequestManager}: Output tree: 101:0 102:0 103:0 104:0 105:0 106:0 107:0 108:0 109:0
+[0 - 7fae4d11a000]   55.008216 {3}{RequestManager}: Committed tokens: 0:100 1:101 2:102 3:103 4:104 5:105 6:106 7:107 8:108
+[0 - 7fae4d11a000]   55.008222 {3}{RequestManager}: Verified: 101:0
+[0 - 7fae4d11a000]   55.008227 {3}{RequestManager}: New committed: 0:100
+[0 - 7fae4d11a000]   55.008231 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   55.008321 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   55.198452 {3}{RequestManager}: SSMs inference time:0.00344685s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   55.199675 {3}{RequestManager}: LLM Tree Verification time:0.00123122s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   55.199754 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   55.199767 {3}{RequestManager}: Input tree: 101:0 102:8883 103:8883 104:8883 105:8883 106:8883 107:8883 108:8883 109:8883
+[0 - 7fae4d11a000]   55.199776 {3}{RequestManager}: Output tree: 102:0 103:0 104:0 105:0 106:0 107:0 108:0 109:0 110:0
+[0 - 7fae4d11a000]   55.199784 {3}{RequestManager}: Committed tokens: 0:101 1:102 2:103 3:104 4:105 5:106 6:107 7:108 8:109
+[0 - 7fae4d11a000]   55.199790 {3}{RequestManager}: Verified: 102:0
+[0 - 7fae4d11a000]   55.199795 {3}{RequestManager}: New committed: 0:101
+[0 - 7fae4d11a000]   55.199798 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   55.199892 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   55.389471 {3}{RequestManager}: SSMs inference time:0.00337552s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   55.390658 {3}{RequestManager}: LLM Tree Verification time:0.00119342s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   55.390729 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   55.390741 {3}{RequestManager}: Input tree: 102:0 103:8883 104:8883 105:8883 106:8883 107:8883 108:8883 109:8883 110:8883
+[0 - 7fae4d11a000]   55.390750 {3}{RequestManager}: Output tree: 103:0 104:0 105:0 106:0 107:0 108:0 109:0 110:0 111:0
+[0 - 7fae4d11a000]   55.390759 {3}{RequestManager}: Committed tokens: 0:102 1:103 2:104 3:105 4:106 5:107 6:108 7:109 8:110
+[0 - 7fae4d11a000]   55.390765 {3}{RequestManager}: Verified: 103:0
+[0 - 7fae4d11a000]   55.390770 {3}{RequestManager}: New committed: 0:102
+[0 - 7fae4d11a000]   55.390774 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   55.390866 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   55.538105 {3}{RequestManager}: SSMs inference time:0.00336334s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   55.539283 {3}{RequestManager}: LLM Tree Verification time:0.00118505s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   55.539356 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   55.539368 {3}{RequestManager}: Input tree: 103:0 104:8883 105:8883 106:8883 107:8883 108:8883 109:8883 110:8883 111:8883
+[0 - 7fae4d11a000]   55.539377 {3}{RequestManager}: Output tree: 104:0 105:0 106:0 107:0 108:0 109:0 110:0 111:0 112:0
+[0 - 7fae4d11a000]   55.539385 {3}{RequestManager}: Committed tokens: 0:103 1:104 2:105 3:106 4:107 5:108 6:109 7:110 8:111
+[0 - 7fae4d11a000]   55.539391 {3}{RequestManager}: Verified: 104:0
+[0 - 7fae4d11a000]   55.539396 {3}{RequestManager}: New committed: 0:103
+[0 - 7fae4d11a000]   55.539400 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   55.539490 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   55.689195 {3}{RequestManager}: SSMs inference time:0.003336s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   55.690373 {3}{RequestManager}: LLM Tree Verification time:0.00118319s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   55.690446 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   55.690458 {3}{RequestManager}: Input tree: 104:0 105:8883 106:8883 107:8883 108:8883 109:8883 110:8883 111:8883 112:8883
+[0 - 7fae4d11a000]   55.690466 {3}{RequestManager}: Output tree: 105:0 106:0 107:0 108:0 109:0 110:0 111:0 112:0 113:0
+[0 - 7fae4d11a000]   55.690475 {3}{RequestManager}: Committed tokens: 0:104 1:105 2:106 3:107 4:108 5:109 6:110 7:111 8:112
+[0 - 7fae4d11a000]   55.690481 {3}{RequestManager}: Verified: 105:0
+[0 - 7fae4d11a000]   55.690486 {3}{RequestManager}: New committed: 0:104
+[0 - 7fae4d11a000]   55.690489 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   55.690581 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   55.880811 {3}{RequestManager}: SSMs inference time:0.00352866s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   55.882015 {3}{RequestManager}: LLM Tree Verification time:0.00121276s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   55.882097 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   55.882110 {3}{RequestManager}: Input tree: 105:0 106:8883 107:8883 108:8883 109:8883 110:8883 111:8883 112:8883 113:8883
+[0 - 7fae4d11a000]   55.882119 {3}{RequestManager}: Output tree: 106:0 107:0 108:0 109:0 110:0 111:0 112:0 113:0 114:0
+[0 - 7fae4d11a000]   55.882127 {3}{RequestManager}: Committed tokens: 0:105 1:106 2:107 3:108 4:109 5:110 6:111 7:112 8:113
+[0 - 7fae4d11a000]   55.882133 {3}{RequestManager}: Verified: 106:0
+[0 - 7fae4d11a000]   55.882138 {3}{RequestManager}: New committed: 0:105
+[0 - 7fae4d11a000]   55.882141 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   55.882236 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   56.071957 {3}{RequestManager}: SSMs inference time:0.00342884s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   56.073169 {3}{RequestManager}: LLM Tree Verification time:0.00122257s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   56.073260 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   56.073274 {3}{RequestManager}: Input tree: 106:0 107:8883 108:8883 109:8883 110:8883 111:8883 112:8883 113:8883 114:8883
+[0 - 7fae4d11a000]   56.073284 {3}{RequestManager}: Output tree: 107:0 108:0 109:0 110:0 111:0 112:0 113:0 114:0 115:0
+[0 - 7fae4d11a000]   56.073293 {3}{RequestManager}: Committed tokens: 0:106 1:107 2:108 3:109 4:110 5:111 6:112 7:113 8:114
+[0 - 7fae4d11a000]   56.073299 {3}{RequestManager}: Verified: 107:0
+[0 - 7fae4d11a000]   56.073304 {3}{RequestManager}: New committed: 0:106
+[0 - 7fae4d11a000]   56.073308 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   56.073406 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   56.261515 {3}{RequestManager}: SSMs inference time:0.0033826s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   56.262704 {3}{RequestManager}: LLM Tree Verification time:0.00119793s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   56.262781 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   56.262794 {3}{RequestManager}: Input tree: 107:0 108:8883 109:8883 110:8883 111:8883 112:8883 113:8883 114:8883 115:8883
+[0 - 7fae4d11a000]   56.262804 {3}{RequestManager}: Output tree: 108:0 109:0 110:0 111:0 112:0 113:0 114:0 115:0 116:0
+[0 - 7fae4d11a000]   56.262812 {3}{RequestManager}: Committed tokens: 0:107 1:108 2:109 3:110 4:111 5:112 6:113 7:114 8:115
+[0 - 7fae4d11a000]   56.262819 {3}{RequestManager}: Verified: 108:0
+[0 - 7fae4d11a000]   56.262824 {3}{RequestManager}: New committed: 0:107
+[0 - 7fae4d11a000]   56.262827 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   56.262923 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   56.414344 {3}{RequestManager}: SSMs inference time:0.00338205s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   56.415521 {3}{RequestManager}: LLM Tree Verification time:0.00118572s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   56.415617 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   56.415631 {3}{RequestManager}: Input tree: 108:0 109:8883 110:8883 111:8883 112:8883 113:8883 114:8883 115:8883 116:8883
+[0 - 7fae4d11a000]   56.415640 {3}{RequestManager}: Output tree: 109:0 110:0 111:0 112:0 113:0 114:0 115:0 116:0 117:0
+[0 - 7fae4d11a000]   56.415649 {3}{RequestManager}: Committed tokens: 0:108 1:109 2:110 3:111 4:112 5:113 6:114 7:115 8:116
+[0 - 7fae4d11a000]   56.415655 {3}{RequestManager}: Verified: 109:0
+[0 - 7fae4d11a000]   56.415660 {3}{RequestManager}: New committed: 0:108
+[0 - 7fae4d11a000]   56.415664 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   56.415759 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   56.571420 {3}{RequestManager}: SSMs inference time:0.00410383s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   56.573087 {3}{RequestManager}: LLM Tree Verification time:0.00167642s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   56.573166 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   56.573179 {3}{RequestManager}: Input tree: 109:0 110:8883 111:8883 112:8883 113:8883 114:8883 115:8883 116:8883 117:8883
+[0 - 7fae4d11a000]   56.573189 {3}{RequestManager}: Output tree: 110:0 111:0 112:0 113:0 114:0 115:0 116:0 117:0 118:0
+[0 - 7fae4d11a000]   56.573197 {3}{RequestManager}: Committed tokens: 0:109 1:110 2:111 3:112 4:113 5:114 6:115 7:116 8:117
+[0 - 7fae4d11a000]   56.573203 {3}{RequestManager}: Verified: 110:0
+[0 - 7fae4d11a000]   56.573209 {3}{RequestManager}: New committed: 0:109
+[0 - 7fae4d11a000]   56.573212 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   56.573310 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   56.736856 {3}{RequestManager}: SSMs inference time:0.00335433s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   56.738029 {3}{RequestManager}: LLM Tree Verification time:0.00117905s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   56.738099 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   56.738111 {3}{RequestManager}: Input tree: 110:0 111:8883 112:8883 113:8883 114:8883 115:8883 116:8883 117:8883 118:8883
+[0 - 7fae4d11a000]   56.738120 {3}{RequestManager}: Output tree: 111:0 112:0 113:0 114:0 115:0 116:0 117:0 118:0 119:0
+[0 - 7fae4d11a000]   56.738128 {3}{RequestManager}: Committed tokens: 0:110 1:111 2:112 3:113 4:114 5:115 6:116 7:117 8:118
+[0 - 7fae4d11a000]   56.738134 {3}{RequestManager}: Verified: 111:0
+[0 - 7fae4d11a000]   56.738138 {3}{RequestManager}: New committed: 0:110
+[0 - 7fae4d11a000]   56.738142 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   56.738237 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   56.905332 {3}{RequestManager}: SSMs inference time:0.00351186s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   56.906543 {3}{RequestManager}: LLM Tree Verification time:0.00122185s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   56.906625 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   56.906639 {3}{RequestManager}: Input tree: 111:0 112:8883 113:8883 114:8883 115:8883 116:8883 117:8883 118:8883 119:8883
+[0 - 7fae4d11a000]   56.906648 {3}{RequestManager}: Output tree: 112:0 113:0 114:0 115:0 116:0 117:0 118:0 119:0 120:0
+[0 - 7fae4d11a000]   56.906658 {3}{RequestManager}: Committed tokens: 0:111 1:112 2:113 3:114 4:115 5:116 6:117 7:118 8:119
+[0 - 7fae4d11a000]   56.906664 {3}{RequestManager}: Verified: 112:0
+[0 - 7fae4d11a000]   56.906669 {3}{RequestManager}: New committed: 0:111
+[0 - 7fae4d11a000]   56.906673 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   56.906776 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   57.099362 {3}{RequestManager}: SSMs inference time:0.0034117s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   57.100569 {3}{RequestManager}: LLM Tree Verification time:0.00121649s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   57.100645 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   57.100658 {3}{RequestManager}: Input tree: 112:0 113:8883 114:8883 115:8883 116:8883 117:8883 118:8883 119:8883 120:8883
+[0 - 7fae4d11a000]   57.100667 {3}{RequestManager}: Output tree: 113:0 114:0 115:0 116:0 117:0 118:0 119:0 120:0 121:0
+[0 - 7fae4d11a000]   57.100676 {3}{RequestManager}: Committed tokens: 0:112 1:113 2:114 3:115 4:116 5:117 6:118 7:119 8:120
+[0 - 7fae4d11a000]   57.100682 {3}{RequestManager}: Verified: 113:0
+[0 - 7fae4d11a000]   57.100687 {3}{RequestManager}: New committed: 0:112
+[0 - 7fae4d11a000]   57.100691 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   57.100790 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   57.273133 {3}{RequestManager}: SSMs inference time:0.00349871s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   57.274367 {3}{RequestManager}: LLM Tree Verification time:0.0012404s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   57.274462 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   57.274475 {3}{RequestManager}: Input tree: 113:0 114:8883 115:8883 116:8883 117:8883 118:8883 119:8883 120:8883 121:8883
+[0 - 7fae4d11a000]   57.274484 {3}{RequestManager}: Output tree: 114:0 115:0 116:0 117:0 118:0 119:0 120:0 121:0 122:0
+[0 - 7fae4d11a000]   57.274493 {3}{RequestManager}: Committed tokens: 0:113 1:114 2:115 3:116 4:117 5:118 6:119 7:120 8:121
+[0 - 7fae4d11a000]   57.274499 {3}{RequestManager}: Verified: 114:0
+[0 - 7fae4d11a000]   57.274504 {3}{RequestManager}: New committed: 0:113
+[0 - 7fae4d11a000]   57.274508 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   57.274610 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   57.423343 {3}{RequestManager}: SSMs inference time:0.00337897s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   57.424549 {3}{RequestManager}: LLM Tree Verification time:0.00121477s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   57.424620 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   57.424632 {3}{RequestManager}: Input tree: 114:0 115:8883 116:8883 117:8883 118:8883 119:8883 120:8883 121:8883 122:8883
+[0 - 7fae4d11a000]   57.424641 {3}{RequestManager}: Output tree: 115:0 116:0 117:0 118:0 119:0 120:0 121:0 122:0 123:0
+[0 - 7fae4d11a000]   57.424649 {3}{RequestManager}: Committed tokens: 0:114 1:115 2:116 3:117 4:118 5:119 6:120 7:121 8:122
+[0 - 7fae4d11a000]   57.424655 {3}{RequestManager}: Verified: 115:0
+[0 - 7fae4d11a000]   57.424660 {3}{RequestManager}: New committed: 0:114
+[0 - 7fae4d11a000]   57.424664 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   57.424761 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   57.574728 {3}{RequestManager}: SSMs inference time:0.00201666s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   57.575445 {3}{RequestManager}: LLM Tree Verification time:0.000722328s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   57.575504 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   57.575512 {3}{RequestManager}: Input tree: 115:0 116:8883 117:8883 118:8883 119:8883 120:8883 121:8883 122:8883 123:8883
+[0 - 7fae4d11a000]   57.575517 {3}{RequestManager}: Output tree: 116:0 117:0 118:0 119:0 120:0 121:0 122:0 123:0 124:0
+[0 - 7fae4d11a000]   57.575522 {3}{RequestManager}: Committed tokens: 0:115 1:116 2:117 3:118 4:119 5:120 6:121 7:122 8:123
+[0 - 7fae4d11a000]   57.575526 {3}{RequestManager}: Verified: 116:0
+[0 - 7fae4d11a000]   57.575528 {3}{RequestManager}: New committed: 0:115
+[0 - 7fae4d11a000]   57.575530 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   57.575590 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   57.883091 {3}{RequestManager}: SSMs inference time:0.00366382s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   57.884587 {3}{RequestManager}: LLM Tree Verification time:0.00150558s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   57.884669 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   57.884685 {3}{RequestManager}: Input tree: 116:0 117:8883 118:8883 119:8883 120:8883 121:8883 122:8883 123:8883 124:8883
+[0 - 7fae4d11a000]   57.884695 {3}{RequestManager}: Output tree: 117:0 118:0 119:0 120:0 121:0 122:0 123:0 124:0 125:0
+[0 - 7fae4d11a000]   57.884704 {3}{RequestManager}: Committed tokens: 0:116 1:117 2:118 3:119 4:120 5:121 6:122 7:123 8:124
+[0 - 7fae4d11a000]   57.884711 {3}{RequestManager}: Verified: 117:0
+[0 - 7fae4d11a000]   57.884717 {3}{RequestManager}: New committed: 0:116
+[0 - 7fae4d11a000]   57.884720 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   57.884895 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   58.015449 {3}{RequestManager}: SSMs inference time:0.00342285s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   58.016691 {3}{RequestManager}: LLM Tree Verification time:0.00124898s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   58.016771 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   58.016786 {3}{RequestManager}: Input tree: 117:0 118:8883 119:8883 120:8883 121:8883 122:8883 123:8883 124:8883 125:8883
+[0 - 7fae4d11a000]   58.016795 {3}{RequestManager}: Output tree: 118:0 119:0 120:0 121:0 122:0 123:0 124:0 125:0 126:0
+[0 - 7fae4d11a000]   58.016804 {3}{RequestManager}: Committed tokens: 0:117 1:118 2:119 3:120 4:121 5:122 6:123 7:124 8:125
+[0 - 7fae4d11a000]   58.016811 {3}{RequestManager}: Verified: 118:0
+[0 - 7fae4d11a000]   58.016816 {3}{RequestManager}: New committed: 0:117
+[0 - 7fae4d11a000]   58.016819 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   58.016923 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   58.141873 {3}{RequestManager}: SSMs inference time:0.00338043s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   58.143491 {3}{RequestManager}: LLM Tree Verification time:0.00162553s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   58.143581 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   58.143594 {3}{RequestManager}: Input tree: 118:0 119:8883 120:8883 121:8883 122:8883 123:8883 124:8883 125:8883 126:8883
+[0 - 7fae4d11a000]   58.143602 {3}{RequestManager}: Output tree: 119:0 120:0 121:0 122:0 123:0 124:0 125:0 126:0 127:0
+[0 - 7fae4d11a000]   58.143610 {3}{RequestManager}: Committed tokens: 0:118 1:119 2:120 3:121 4:122 5:123 6:124 7:125 8:126
+[0 - 7fae4d11a000]   58.143629 {3}{RequestManager}: Verified: 119:0
+[0 - 7fae4d11a000]   58.143634 {3}{RequestManager}: New committed: 0:118
+[0 - 7fae4d11a000]   58.143638 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   58.143740 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   58.279771 {3}{RequestManager}: SSMs inference time:0.00350515s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   58.280995 {3}{RequestManager}: LLM Tree Verification time:0.00123596s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   58.281078 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7fae4d11a000]   58.281096 {3}{RequestManager}: Input tree: 119:0 120:8883 121:8883 122:8883 123:8883 124:8883 125:8883 126:8883 127:8883
+[0 - 7fae4d11a000]   58.281105 {3}{RequestManager}: Output tree: 120:0 121:0 122:0 123:0 124:0 125:0 126:0 127:0 128:0
+[0 - 7fae4d11a000]   58.281114 {3}{RequestManager}: Committed tokens: 0:119 1:120 2:121 3:122 4:123 5:124 6:125 7:126 8:127
+[0 - 7fae4d11a000]   58.281121 {3}{RequestManager}: Verified: 120:0
+[0 - 7fae4d11a000]   58.281126 {3}{RequestManager}: New committed: 0:119
+[0 - 7fae4d11a000]   58.281130 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   58.281243 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   58.416088 {3}{RequestManager}: SSMs inference time:0.0033815s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   58.417289 {3}{RequestManager}: LLM Tree Verification time:0.00120872s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   58.417364 {3}{RequestManager}: Input tree size (8) Output tree size (8)
+[0 - 7fae4d11a000]   58.417377 {3}{RequestManager}: Input tree: 120:0 121:8883 122:8883 123:8883 124:8883 125:8883 126:8883 127:8883
+[0 - 7fae4d11a000]   58.417386 {3}{RequestManager}: Output tree: 121:0 122:0 123:0 124:0 125:0 126:0 127:0 128:0
+[0 - 7fae4d11a000]   58.417394 {3}{RequestManager}: Committed tokens: 0:120 1:121 2:122 3:123 4:124 5:125 6:126 7:127
+[0 - 7fae4d11a000]   58.417401 {3}{RequestManager}: Verified: 121:0
+[0 - 7fae4d11a000]   58.417406 {3}{RequestManager}: New committed: 0:120
+[0 - 7fae4d11a000]   58.417409 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   58.417516 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   58.553061 {3}{RequestManager}: SSMs inference time:0.00346483s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   58.554266 {3}{RequestManager}: LLM Tree Verification time:0.00121188s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   58.554336 {3}{RequestManager}: Input tree size (7) Output tree size (7)
+[0 - 7fae4d11a000]   58.554347 {3}{RequestManager}: Input tree: 121:0 122:8883 123:8883 124:8883 125:8883 126:8883 127:8883
+[0 - 7fae4d11a000]   58.554355 {3}{RequestManager}: Output tree: 122:0 123:0 124:0 125:0 126:0 127:0 128:0
+[0 - 7fae4d11a000]   58.554363 {3}{RequestManager}: Committed tokens: 0:121 1:122 2:123 3:124 4:125 5:126 6:127
+[0 - 7fae4d11a000]   58.554369 {3}{RequestManager}: Verified: 122:0
+[0 - 7fae4d11a000]   58.554374 {3}{RequestManager}: New committed: 0:121
+[0 - 7fae4d11a000]   58.554378 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   58.554483 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   58.694087 {3}{RequestManager}: SSMs inference time:0.00338854s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   58.695272 {3}{RequestManager}: LLM Tree Verification time:0.00119069s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   58.695342 {3}{RequestManager}: Input tree size (6) Output tree size (6)
+[0 - 7fae4d11a000]   58.695352 {3}{RequestManager}: Input tree: 122:0 123:8883 124:8883 125:8883 126:8883 127:8883
+[0 - 7fae4d11a000]   58.695359 {3}{RequestManager}: Output tree: 123:0 124:0 125:0 126:0 127:0 128:0
+[0 - 7fae4d11a000]   58.695366 {3}{RequestManager}: Committed tokens: 0:122 1:123 2:124 3:125 4:126 5:127
+[0 - 7fae4d11a000]   58.695372 {3}{RequestManager}: Verified: 123:0
+[0 - 7fae4d11a000]   58.695376 {3}{RequestManager}: New committed: 0:122
+[0 - 7fae4d11a000]   58.695380 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   58.695495 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   58.892700 {3}{RequestManager}: SSMs inference time:0.00351191s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   58.893943 {3}{RequestManager}: LLM Tree Verification time:0.00125357s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   58.894051 {3}{RequestManager}: Input tree size (5) Output tree size (5)
+[0 - 7fae4d11a000]   58.894066 {3}{RequestManager}: Input tree: 123:0 124:8883 125:8883 126:8883 127:8883
+[0 - 7fae4d11a000]   58.894074 {3}{RequestManager}: Output tree: 124:0 125:0 126:0 127:0 128:0
+[0 - 7fae4d11a000]   58.894082 {3}{RequestManager}: Committed tokens: 0:123 1:124 2:125 3:126 4:127
+[0 - 7fae4d11a000]   58.894089 {3}{RequestManager}: Verified: 124:0
+[0 - 7fae4d11a000]   58.894094 {3}{RequestManager}: New committed: 0:123
+[0 - 7fae4d11a000]   58.894097 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   58.894207 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   59.095461 {3}{RequestManager}: SSMs inference time:0.00344426s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   59.096722 {3}{RequestManager}: LLM Tree Verification time:0.00126849s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   59.096797 {3}{RequestManager}: Input tree size (4) Output tree size (4)
+[0 - 7fae4d11a000]   59.096807 {3}{RequestManager}: Input tree: 124:0 125:8883 126:8883 127:8883
+[0 - 7fae4d11a000]   59.096814 {3}{RequestManager}: Output tree: 125:0 126:0 127:0 128:0
+[0 - 7fae4d11a000]   59.096821 {3}{RequestManager}: Committed tokens: 0:124 1:125 2:126 3:127
+[0 - 7fae4d11a000]   59.096827 {3}{RequestManager}: Verified: 125:0
+[0 - 7fae4d11a000]   59.096832 {3}{RequestManager}: New committed: 0:124
+[0 - 7fae4d11a000]   59.096835 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   59.096944 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   59.288500 {3}{RequestManager}: SSMs inference time:0.00343261s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   59.289712 {3}{RequestManager}: LLM Tree Verification time:0.00122107s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   59.289785 {3}{RequestManager}: Input tree size (3) Output tree size (3)
+[0 - 7fae4d11a000]   59.289795 {3}{RequestManager}: Input tree: 125:0 126:8883 127:8883
+[0 - 7fae4d11a000]   59.289802 {3}{RequestManager}: Output tree: 126:0 127:0 128:0
+[0 - 7fae4d11a000]   59.289809 {3}{RequestManager}: Committed tokens: 0:125 1:126 2:127
+[0 - 7fae4d11a000]   59.289815 {3}{RequestManager}: Verified: 126:0
+[0 - 7fae4d11a000]   59.289820 {3}{RequestManager}: New committed: 0:125
+[0 - 7fae4d11a000]   59.289824 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   59.289931 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   59.479560 {3}{RequestManager}: SSMs inference time:0.00338512s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   59.480741 {3}{RequestManager}: LLM Tree Verification time:0.00118795s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7fae4d11a000]   59.480812 {3}{RequestManager}: Input tree size (2) Output tree size (2)
+[0 - 7fae4d11a000]   59.480820 {3}{RequestManager}: Input tree: 126:0 127:8883
+[0 - 7fae4d11a000]   59.480826 {3}{RequestManager}: Output tree: 127:0 128:0
+[0 - 7fae4d11a000]   59.480831 {3}{RequestManager}: Committed tokens: 0:126 1:127
+[0 - 7fae4d11a000]   59.480837 {3}{RequestManager}: Verified: 127:0
+[0 - 7fae4d11a000]   59.480841 {3}{RequestManager}: New committed: 0:126
+[0 - 7fae4d11a000]   59.480845 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7fae4d11a000]   59.480849 {3}{RequestManager}: [Done] guid(1000000) with final length(128)
+[0 - 7fae4d11a000]   59.480958 {3}{RequestManager}: Final output: </s>Here are some travel tips for Shanghai: n<s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s><s>
+[0 - 7fae4d11a000]   59.480970 {3}{RequestManager}: [Profile] guid(1000000) decoding_steps(118) start(36951575.0) finish(59480960.0) latency(22529385.0)
+
+############### prepare_next_batch_verify ###############
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7fae4d11a000]   59.561849 {3}{RequestManager}: SSMs inference time:0.00334984s.
+========== prepare_next_batch_verify ==========
+[0 - 7fae4d11a000]   59.563036 {3}{RequestManager}: LLM Tree Verification time:0.00119312s.
+
+############### prepare_next_batch_init ###############
+
+############### prepare_next_batch_verify ###############
+
+############### prepare_next_batch_init ###############
+
+############### prepare_next_batch_verify ###############
+
+############### prepare_next_batch_init ###############
+
+############### prepare_next_batch_verify ###############
+
+############### prepare_next_batch_init ###############
+
+############### prepare_next_batch_verify ###############
+----------inference finished--------------

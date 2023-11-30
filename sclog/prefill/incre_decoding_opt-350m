@@ -1,0 +1,24 @@
+[0 - 7ff35e70a000]    0.271641 {3}{Mapper}: Enabled Control Replication Optimizations.
+[0 - 7ff35e70a000]    0.271700 {3}{Mapper}: Enabled Control Replication Optimizations.
+[0 - 7ff35e70a000]    0.271716 {3}{Mapper}: Enabled Control Replication Optimizations.
+[0 - 7ff35e70a000]    0.271724 {3}{Mapper}: Enabled Control Replication Optimizations.
+[0 - 7ff35e70a000]    0.271736 {3}{Mapper}: Enabled Control Replication Optimizations.
+workSpaceSize (128 MB)
+workSpaceSize (128 MB)
+workSpaceSize (128 MB)
+workSpaceSize (128 MB)
+[0 - 7ff35e70a000]    0.601472 {3}{opt}: These are OPT model config:
+OPT Config:
+	do_layer_norm_before: 0
+	dropout: 0.1
+	enable_bias: 1
+	ffn_dim: 4096
+	hidden_size: 1024
+	layer_norm_elementwise_affine: 1
+	max_position_embeddings: 2048
+	num_attention_heads: 16
+	num_hidden_layers: 24
+	vocab_size: 50272
+	word_embed_proj_dim: 512
+	max_beam_width: 1
+	max_beam_depth: 8

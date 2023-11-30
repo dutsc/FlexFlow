@@ -1,0 +1,1263 @@
+workSpaceSize (128 MB)
+workSpaceSize (128 MB)
+workSpaceSize (128 MB)
+workSpaceSize (128 MB)
+OPT Config:
+	do_layer_norm_before: 1
+	dropout: 0.1
+	enable_bias: 1
+	ffn_dim: 20480
+	hidden_size: 5120
+	layer_norm_elementwise_affine: 1
+	max_position_embeddings: 2048
+	num_attention_heads: 40
+	num_hidden_layers: 40
+	vocab_size: 50272
+	word_embed_proj_dim: 5120
+	max_beam_width: 1
+	max_beam_depth: 8
+------start compile ----------
+num_nodes = 1 num_gpus_per_node = 4
+optimal_views.size = 247
+views.size() = 247
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ndim(1) dims[1 0 0 0]
+------finished loading weights----------
+OPT Config:
+	do_layer_norm_before: 1
+	dropout: 0.1
+	enable_bias: 1
+	ffn_dim: 3072
+	hidden_size: 768
+	layer_norm_elementwise_affine: 1
+	max_position_embeddings: 2048
+	num_attention_heads: 12
+	num_hidden_layers: 12
+	vocab_size: 50272
+	word_embed_proj_dim: 768
+	max_beam_width: 1
+	max_beam_depth: 8
+------start compile ----------
+spec create operator: layers_0_attention_1000005
+spec create operator: layers_1_attention_1000011
+spec create operator: layers_2_attention_1000017
+spec create operator: layers_3_attention_1000023
+spec create operator: layers_4_attention_1000029
+spec create operator: layers_5_attention_1000035
+spec create operator: layers_6_attention_1000041
+spec create operator: layers_7_attention_1000047
+spec create operator: layers_8_attention_1000053
+spec create operator: layers_9_attention_1000059
+spec create operator: layers_10_attention_1000065
+spec create operator: layers_11_attention_1000071
+num_nodes = 1 num_gpus_per_node = 4
+optimal_views.size = 80
+views.size() = 80
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ndim(1) dims[1 0 0 0]
+------finished loading weights----------
+========== register ssm model ==========
+Register new model with id: 0
+Prompt[0]: Here are some travel tips for Shanghai: n
+========== generate ==========
+========== generate_spec_infer ==========
+[0]11773
+[1]32
+[2]103
+[3]1504
+[4]4965
+[5]13
+[6]7137
+[7]35
+[8]295
+Num of models: 1
+[0 - 7f40fdab4000]   57.732851 {3}{RequestManager}: [1000000]New request tokens: 2 11773 32 103 1504 4965 13 7137 35 295
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   57.734081 {3}{RequestManager}: SSMs inference time:0.00113345s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   57.735240 {3}{RequestManager}: LLM Tree Verification time:0.00116541s.
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   57.736305 {3}{RequestManager}: SSMs inference time:0.00103933s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   57.736781 {3}{RequestManager}: LLM Tree Verification time:0.000476722s.
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   57.737827 {3}{RequestManager}: SSMs inference time:0.00102579s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   57.738287 {3}{RequestManager}: LLM Tree Verification time:0.00046039s.
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   57.739338 {3}{RequestManager}: SSMs inference time:0.00103831s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   57.739795 {3}{RequestManager}: LLM Tree Verification time:0.00045754s.
+
+############### prepare_next_batch_init ###############
+SSM KV Cache Size init: 10
+LLM KV Cache Size init: 0
+load 10 tokens for request 1000000
+total prompt in request: 10
+
+############### prepare_next_batch_verify ###############
+max_prompt_load_size: 245
+new_bc.requestsInfo[i].num_tokens_in_batch: 10
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   58.544278 {3}{RequestManager}: SSMs inference time:0.00148754s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   58.544941 {3}{RequestManager}: LLM Tree Verification time:0.000671121s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   58.595391 {3}{RequestManager}: Input tree size (1) Output tree size (1)
+[0 - 7f40fdab4000]   58.595397 {3}{RequestManager}: Input tree: 9:295
+[0 - 7f40fdab4000]   58.595399 {3}{RequestManager}: Output tree: 10:73
+[0 - 7f40fdab4000]   58.595401 {3}{RequestManager}: Committed tokens: 9:9
+[0 - 7f40fdab4000]   58.595405 {3}{RequestManager}: Verified: 10:73
+[0 - 7f40fdab4000]   58.595407 {3}{RequestManager}: New committed: 9:9
+[0 - 7f40fdab4000]   58.595408 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7f40fdab4000]   58.595478 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   58.793350 {3}{RequestManager}: SSMs inference time:0.00141212s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   58.793978 {3}{RequestManager}: LLM Tree Verification time:0.000635949s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   58.794022 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   58.794028 {3}{RequestManager}: Input tree: 10:73 11:102 12:50118 13:50118 14:134 15:4 16:2315 17:10 18:2303
+[0 - 7f40fdab4000]   58.794032 {3}{RequestManager}: Output tree: 11:102 12:50118 13:50118 14:3609 15:4 16:50118 17:198 18:18350 19:11
+[0 - 7f40fdab4000]   58.794035 {3}{RequestManager}: Committed tokens: 0:10 1:11 2:12 3:13 4:14 5:15 6:16 7:17 8:18
+[0 - 7f40fdab4000]   58.794039 {3}{RequestManager}: Verified: 11:102 12:50118 13:50118 14:3609
+[0 - 7f40fdab4000]   58.794042 {3}{RequestManager}: New committed: 0:10 1:11 2:12 3:13
+[0 - 7f40fdab4000]   58.794043 {3}{RequestManager}: Number of Verified Tokens = 4
+[0 - 7f40fdab4000]   58.794078 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Sh
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   58.973257 {3}{RequestManager}: SSMs inference time:0.00136505s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   58.973876 {3}{RequestManager}: LLM Tree Verification time:0.000623621s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   58.973915 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   58.973920 {3}{RequestManager}: Input tree: 14:3609 15:260 16:43673 17:16 18:10 19:343 20:14 21:16 22:684
+[0 - 7f40fdab4000]   58.973924 {3}{RequestManager}: Output tree: 15:260 16:43673 17:16 18:10 19:343 20:9 21:16 22:182 23:13
+[0 - 7f40fdab4000]   58.973927 {3}{RequestManager}: Committed tokens: 0:14 1:15 2:16 3:17 4:18 5:19 6:20 7:21 8:22
+[0 - 7f40fdab4000]   58.973931 {3}{RequestManager}: Verified: 15:260 16:43673 17:16 18:10 19:343 20:9
+[0 - 7f40fdab4000]   58.973934 {3}{RequestManager}: New committed: 0:14 1:15 2:16 3:17 4:18 5:19
+[0 - 7f40fdab4000]   58.973935 {3}{RequestManager}: Number of Verified Tokens = 6
+[0 - 7f40fdab4000]   58.973966 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   59.188448 {3}{RequestManager}: SSMs inference time:0.00364636s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   59.189986 {3}{RequestManager}: LLM Tree Verification time:0.00154543s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   59.190082 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   59.190095 {3}{RequestManager}: Input tree: 20:9 21:171 22:383 23:4 24:85 25:16 26:10 27:343 28:9
+[0 - 7f40fdab4000]   59.190104 {3}{RequestManager}: Output tree: 21:33569 22:33569 23:4 24:85 25:16 26:10 27:343 28:9 29:29479
+[0 - 7f40fdab4000]   59.190112 {3}{RequestManager}: Committed tokens: 0:20 1:21 2:22 3:23 4:24 5:25 6:26 7:27 8:28
+[0 - 7f40fdab4000]   59.190119 {3}{RequestManager}: Verified: 21:33569
+[0 - 7f40fdab4000]   59.190123 {3}{RequestManager}: New committed: 0:20
+[0 - 7f40fdab4000]   59.190127 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7f40fdab4000]   59.190176 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   59.392841 {3}{RequestManager}: SSMs inference time:0.00339367s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   59.394727 {3}{RequestManager}: LLM Tree Verification time:0.0018937s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   59.394801 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   59.394814 {3}{RequestManager}: Input tree: 21:33569 22:4 23:85 24:16 25:10 26:343 27:9 28:33569 29:4
+[0 - 7f40fdab4000]   59.394823 {3}{RequestManager}: Output tree: 22:4 23:85 24:16 25:10 26:343 27:9 28:29479 29:4 30:85
+[0 - 7f40fdab4000]   59.394831 {3}{RequestManager}: Committed tokens: 0:21 1:22 2:23 3:24 4:25 5:26 6:27 7:28 8:29
+[0 - 7f40fdab4000]   59.394842 {3}{RequestManager}: Verified: 22:4 23:85 24:16 25:10 26:343 27:9 28:29479
+[0 - 7f40fdab4000]   59.394849 {3}{RequestManager}: New committed: 0:21 1:22 2:23 3:24 4:25 5:26 6:27
+[0 - 7f40fdab4000]   59.394853 {3}{RequestManager}: Number of Verified Tokens = 7
+[0 - 7f40fdab4000]   59.394914 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skysc
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   59.601339 {3}{RequestManager}: SSMs inference time:0.00340485s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   59.602772 {3}{RequestManager}: LLM Tree Verification time:0.00143854s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   59.602843 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   59.602854 {3}{RequestManager}: Input tree: 28:29479 29:8645 30:268 31:6 32:29479 33:8645 34:268 35:6 36:29479
+[0 - 7f40fdab4000]   59.602863 {3}{RequestManager}: Output tree: 29:8645 30:268 31:8 32:9 33:8645 34:268 35:6 36:8 37:8645
+[0 - 7f40fdab4000]   59.602871 {3}{RequestManager}: Committed tokens: 0:28 1:29 2:30 3:31 4:32 5:33 6:34 7:35 8:36
+[0 - 7f40fdab4000]   59.602880 {3}{RequestManager}: Verified: 29:8645 30:268 31:8
+[0 - 7f40fdab4000]   59.602885 {3}{RequestManager}: New committed: 0:28 1:29 2:30
+[0 - 7f40fdab4000]   59.602889 {3}{RequestManager}: Number of Verified Tokens = 3
+[0 - 7f40fdab4000]   59.602949 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   59.821943 {3}{RequestManager}: SSMs inference time:0.00342912s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   59.823350 {3}{RequestManager}: LLM Tree Verification time:0.00141566s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   59.823448 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   59.823460 {3}{RequestManager}: Input tree: 31:8 32:29479 33:8645 34:268 35:4 36:85 37:16 38:10 39:343
+[0 - 7f40fdab4000]   59.823469 {3}{RequestManager}: Output tree: 32:8178 33:8645 34:268 35:6 36:85 37:16 38:10 39:343 40:9
+[0 - 7f40fdab4000]   59.823477 {3}{RequestManager}: Committed tokens: 0:31 1:32 2:33 3:34 4:35 5:36 6:37 7:38 8:39
+[0 - 7f40fdab4000]   59.823484 {3}{RequestManager}: Verified: 32:8178
+[0 - 7f40fdab4000]   59.823488 {3}{RequestManager}: New committed: 0:31
+[0 - 7f40fdab4000]   59.823492 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7f40fdab4000]   59.823556 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   59.993136 {3}{RequestManager}: SSMs inference time:0.0038524s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   59.995002 {3}{RequestManager}: LLM Tree Verification time:0.00187215s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   59.995083 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   59.995095 {3}{RequestManager}: Input tree: 32:8178 33:3413 34:4 35:85 36:16 37:67 38:10 39:343 40:9
+[0 - 7f40fdab4000]   59.995104 {3}{RequestManager}: Output tree: 33:31168 34:6 35:85 36:16 37:10 38:10 39:343 40:9 41:2297
+[0 - 7f40fdab4000]   59.995113 {3}{RequestManager}: Committed tokens: 0:32 1:33 2:34 3:35 4:36 5:37 6:38 7:39 8:40
+[0 - 7f40fdab4000]   59.995120 {3}{RequestManager}: Verified: 33:31168
+[0 - 7f40fdab4000]   59.995125 {3}{RequestManager}: New committed: 0:32
+[0 - 7f40fdab4000]   59.995128 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7f40fdab4000]   59.995187 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   60.206174 {3}{RequestManager}: SSMs inference time:0.00341707s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   60.207575 {3}{RequestManager}: LLM Tree Verification time:0.00140729s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   60.207648 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   60.207661 {3}{RequestManager}: Input tree: 33:31168 34:4 35:85 36:16 37:67 38:10 39:343 40:9 41:5
+[0 - 7f40fdab4000]   60.207670 {3}{RequestManager}: Output tree: 34:6 35:85 36:16 37:10 38:10 39:343 40:9 41:6631 42:499
+[0 - 7f40fdab4000]   60.207678 {3}{RequestManager}: Committed tokens: 0:33 1:34 2:35 3:36 4:37 5:38 6:39 7:40 8:41
+[0 - 7f40fdab4000]   60.207685 {3}{RequestManager}: Verified: 34:6
+[0 - 7f40fdab4000]   60.207690 {3}{RequestManager}: New committed: 0:33
+[0 - 7f40fdab4000]   60.207694 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7f40fdab4000]   60.207755 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples,
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   60.427780 {3}{RequestManager}: SSMs inference time:0.003413s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   60.429181 {3}{RequestManager}: LLM Tree Verification time:0.0014087s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   60.429273 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   60.429285 {3}{RequestManager}: Input tree: 34:6 35:8 36:24 37:16 38:67 39:10 40:343 41:9 42:5
+[0 - 7f40fdab4000]   60.429294 {3}{RequestManager}: Output tree: 35:9 36:9 37:16 38:10 39:10 40:343 41:9 42:2297 43:499
+[0 - 7f40fdab4000]   60.429302 {3}{RequestManager}: Committed tokens: 0:34 1:35 2:36 3:37 4:38 5:39 6:40 7:41 8:42
+[0 - 7f40fdab4000]   60.429308 {3}{RequestManager}: Verified: 35:9
+[0 - 7f40fdab4000]   60.429313 {3}{RequestManager}: New committed: 0:34
+[0 - 7f40fdab4000]   60.429316 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7f40fdab4000]   60.429368 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples, of
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   60.658555 {3}{RequestManager}: SSMs inference time:0.00344215s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   60.659971 {3}{RequestManager}: LLM Tree Verification time:0.00142472s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   60.660048 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   60.660062 {3}{RequestManager}: Input tree: 35:9 36:61 37:89 38:32 39:171 40:4 41:85 42:16 43:67
+[0 - 7f40fdab4000]   60.660070 {3}{RequestManager}: Output tree: 36:2297 37:5 38:32 39:171 40:4 41:85 42:16 43:10 44:10
+[0 - 7f40fdab4000]   60.660078 {3}{RequestManager}: Committed tokens: 0:35 1:36 2:37 3:38 4:39 5:40 6:41 7:42 8:43
+[0 - 7f40fdab4000]   60.660085 {3}{RequestManager}: Verified: 36:2297
+[0 - 7f40fdab4000]   60.660090 {3}{RequestManager}: New committed: 0:35
+[0 - 7f40fdab4000]   60.660093 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7f40fdab4000]   60.660159 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples, of modern
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   60.847925 {3}{RequestManager}: SSMs inference time:0.00341295s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   60.849362 {3}{RequestManager}: LLM Tree Verification time:0.00144408s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   60.849438 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   60.849450 {3}{RequestManager}: Input tree: 36:2297 37:9437 38:8 39:9 40:5 41:5444 42:4 43:85 44:16
+[0 - 7f40fdab4000]   60.849459 {3}{RequestManager}: Output tree: 37:3482 38:8 39:8178 40:8178 41:793 42:4 43:85 44:16 45:10
+[0 - 7f40fdab4000]   60.849467 {3}{RequestManager}: Committed tokens: 0:36 1:37 2:38 3:39 4:40 5:41 6:42 7:43 8:44
+[0 - 7f40fdab4000]   60.849474 {3}{RequestManager}: Verified: 37:3482
+[0 - 7f40fdab4000]   60.849478 {3}{RequestManager}: New committed: 0:36
+[0 - 7f40fdab4000]   60.849482 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7f40fdab4000]   60.849545 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples, of modern shopping
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   61.051510 {3}{RequestManager}: SSMs inference time:0.00347086s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   61.052968 {3}{RequestManager}: LLM Tree Verification time:0.00146745s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   61.053051 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   61.053065 {3}{RequestManager}: Input tree: 37:3482 38:21829 39:8 40:9 41:5 42:144 43:3395 44:1111 45:4329
+[0 - 7f40fdab4000]   61.053074 {3}{RequestManager}: Output tree: 38:21829 39:8 40:8178 41:8178 42:232 43:8178 44:1111 45:15382 46:11
+[0 - 7f40fdab4000]   61.053082 {3}{RequestManager}: Committed tokens: 0:37 1:38 2:39 3:40 4:41 5:42 6:43 7:44 8:45
+[0 - 7f40fdab4000]   61.053092 {3}{RequestManager}: Verified: 38:21829 39:8 40:8178
+[0 - 7f40fdab4000]   61.053098 {3}{RequestManager}: New committed: 0:37 1:38 2:39
+[0 - 7f40fdab4000]   61.053101 {3}{RequestManager}: Number of Verified Tokens = 3
+[0 - 7f40fdab4000]   61.053183 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples, of modern shopping malls and ancient
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   61.268677 {3}{RequestManager}: SSMs inference time:0.0034926s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   61.270141 {3}{RequestManager}: LLM Tree Verification time:0.00147598s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   61.270225 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   61.270241 {3}{RequestManager}: Input tree: 40:8178 41:31168 42:4 43:85 44:16 45:67 46:10 47:343 48:9
+[0 - 7f40fdab4000]   61.270251 {3}{RequestManager}: Output tree: 41:1048 42:6 43:85 44:16 45:10 46:10 47:343 48:9 49:33569
+[0 - 7f40fdab4000]   61.270260 {3}{RequestManager}: Committed tokens: 0:40 1:41 2:42 3:43 4:44 5:45 6:46 7:47 8:48
+[0 - 7f40fdab4000]   61.270267 {3}{RequestManager}: Verified: 41:1048
+[0 - 7f40fdab4000]   61.270272 {3}{RequestManager}: New committed: 0:40
+[0 - 7f40fdab4000]   61.270276 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7f40fdab4000]   61.270362 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples, of modern shopping malls and ancient markets
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   61.481656 {3}{RequestManager}: SSMs inference time:0.00342584s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   61.483078 {3}{RequestManager}: LLM Tree Verification time:0.00143035s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   61.483152 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   61.483164 {3}{RequestManager}: Input tree: 41:1048 42:4 43:85 44:16 45:67 46:10 47:343 48:9 49:5
+[0 - 7f40fdab4000]   61.483173 {3}{RequestManager}: Output tree: 42:6 43:85 44:16 45:10 46:10 47:343 48:9 49:33569 50:499
+[0 - 7f40fdab4000]   61.483181 {3}{RequestManager}: Committed tokens: 0:41 1:42 2:43 3:44 4:45 5:46 6:47 7:48 8:49
+[0 - 7f40fdab4000]   61.483188 {3}{RequestManager}: Verified: 42:6
+[0 - 7f40fdab4000]   61.483193 {3}{RequestManager}: New committed: 0:41
+[0 - 7f40fdab4000]   61.483197 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7f40fdab4000]   61.483263 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples, of modern shopping malls and ancient markets,
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   61.698176 {3}{RequestManager}: SSMs inference time:0.00341133s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   61.699597 {3}{RequestManager}: LLM Tree Verification time:0.00142702s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   61.699668 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   61.699680 {3}{RequestManager}: Input tree: 42:6 43:8 44:9 45:5 46:144 47:2721 48:8 49:2679 50:2127
+[0 - 7f40fdab4000]   61.699689 {3}{RequestManager}: Output tree: 43:9 44:9 45:5 46:232 47:2297 48:8 49:144 50:9437 51:11
+[0 - 7f40fdab4000]   61.699698 {3}{RequestManager}: Committed tokens: 0:42 1:43 2:44 3:45 4:46 5:47 6:48 7:49 8:50
+[0 - 7f40fdab4000]   61.699705 {3}{RequestManager}: Verified: 43:9
+[0 - 7f40fdab4000]   61.699710 {3}{RequestManager}: New committed: 0:42
+[0 - 7f40fdab4000]   61.699713 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7f40fdab4000]   61.699777 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples, of modern shopping malls and ancient markets, of
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   61.888768 {3}{RequestManager}: SSMs inference time:0.0034448s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   61.890197 {3}{RequestManager}: LLM Tree Verification time:0.00143554s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   61.890269 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   61.890281 {3}{RequestManager}: Input tree: 43:9 44:2297 45:4329 46:8 47:28220 48:6 49:9 50:2297 51:3482
+[0 - 7f40fdab4000]   61.890290 {3}{RequestManager}: Output tree: 44:239 45:1808 46:8 47:8178 48:8 49:8 50:2297 51:1808 52:21829
+[0 - 7f40fdab4000]   61.890298 {3}{RequestManager}: Committed tokens: 0:43 1:44 2:45 3:46 4:47 5:48 6:49 7:50 8:51
+[0 - 7f40fdab4000]   61.890305 {3}{RequestManager}: Verified: 44:239
+[0 - 7f40fdab4000]   61.890310 {3}{RequestManager}: New committed: 0:43
+[0 - 7f40fdab4000]   61.890314 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7f40fdab4000]   61.890384 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples, of modern shopping malls and ancient markets, of high
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   62.106319 {3}{RequestManager}: SSMs inference time:0.00343378s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   62.107726 {3}{RequestManager}: LLM Tree Verification time:0.00141331s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   62.107799 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   62.107811 {3}{RequestManager}: Input tree: 44:239 45:12 46:1397 47:4329 48:8 49:28220 50:6 51:9 52:5
+[0 - 7f40fdab4000]   62.107820 {3}{RequestManager}: Output tree: 45:12 46:9406 47:4329 48:8 49:2014 50:8 51:8 52:239 53:13309
+[0 - 7f40fdab4000]   62.107828 {3}{RequestManager}: Committed tokens: 0:44 1:45 2:46 3:47 4:48 5:49 6:50 7:51 8:52
+[0 - 7f40fdab4000]   62.107836 {3}{RequestManager}: Verified: 45:12 46:9406
+[0 - 7f40fdab4000]   62.107841 {3}{RequestManager}: New committed: 0:44 1:45
+[0 - 7f40fdab4000]   62.107844 {3}{RequestManager}: Number of Verified Tokens = 2
+[0 - 7f40fdab4000]   62.107921 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples, of modern shopping malls and ancient markets, of high-tech
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   62.326348 {3}{RequestManager}: SSMs inference time:0.00354103s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   62.327766 {3}{RequestManager}: LLM Tree Verification time:0.00142524s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   62.327838 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   62.327849 {3}{RequestManager}: Input tree: 46:9406 47:8 48:239 49:12 50:9406 51:4510 52:4 53:85 54:16
+[0 - 7f40fdab4000]   62.327858 {3}{RequestManager}: Output tree: 47:539 48:614 49:12 50:26673 51:4 52:6 53:85 54:16 55:10
+[0 - 7f40fdab4000]   62.327867 {3}{RequestManager}: Committed tokens: 0:46 1:47 2:48 3:49 4:50 5:51 6:52 7:53 8:54
+[0 - 7f40fdab4000]   62.327873 {3}{RequestManager}: Verified: 47:539
+[0 - 7f40fdab4000]   62.327878 {3}{RequestManager}: New committed: 0:46
+[0 - 7f40fdab4000]   62.327881 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7f40fdab4000]   62.327951 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples, of modern shopping malls and ancient markets, of high-tech industry
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   62.579760 {3}{RequestManager}: SSMs inference time:0.00373643s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   62.581733 {3}{RequestManager}: LLM Tree Verification time:0.00198026s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   62.581804 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   62.581815 {3}{RequestManager}: Input tree: 47:539 48:8 49:9 50:5 51:144 52:2721 53:343 54:11 55:5
+[0 - 7f40fdab4000]   62.581825 {3}{RequestManager}: Output tree: 48:8 49:8178 50:2065 51:232 52:8178 53:14002 54:14002 55:436 56:232
+[0 - 7f40fdab4000]   62.581833 {3}{RequestManager}: Committed tokens: 0:47 1:48 2:49 3:50 4:51 5:52 6:53 7:54 8:55
+[0 - 7f40fdab4000]   62.581840 {3}{RequestManager}: Verified: 48:8 49:8178
+[0 - 7f40fdab4000]   62.581845 {3}{RequestManager}: New committed: 0:47 1:48
+[0 - 7f40fdab4000]   62.581848 {3}{RequestManager}: Number of Verified Tokens = 2
+[0 - 7f40fdab4000]   62.582104 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples, of modern shopping malls and ancient markets, of high-tech industry and ancient
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   62.781268 {3}{RequestManager}: SSMs inference time:0.00345951s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   62.782694 {3}{RequestManager}: LLM Tree Verification time:0.00143287s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   62.782764 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   62.782776 {3}{RequestManager}: Input tree: 49:8178 50:9437 51:4 52:85 53:16 54:67 55:10 56:343 57:9
+[0 - 7f40fdab4000]   62.782784 {3}{RequestManager}: Output tree: 50:16196 51:4 52:85 53:16 54:10 55:10 56:343 57:9 58:33569
+[0 - 7f40fdab4000]   62.782793 {3}{RequestManager}: Committed tokens: 0:49 1:50 2:51 3:52 4:53 5:54 6:55 7:56 8:57
+[0 - 7f40fdab4000]   62.782800 {3}{RequestManager}: Verified: 50:16196
+[0 - 7f40fdab4000]   62.782805 {3}{RequestManager}: New committed: 0:49
+[0 - 7f40fdab4000]   62.782809 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7f40fdab4000]   62.782888 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples, of modern shopping malls and ancient markets, of high-tech industry and ancient crafts
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   62.971534 {3}{RequestManager}: SSMs inference time:0.00340561s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   62.972947 {3}{RequestManager}: LLM Tree Verification time:0.00141911s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   62.973017 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   62.973028 {3}{RequestManager}: Input tree: 50:16196 51:4 52:85 53:16 54:67 55:10 56:343 57:9 58:5
+[0 - 7f40fdab4000]   62.973037 {3}{RequestManager}: Output tree: 51:4 52:85 53:16 54:10 55:10 56:343 57:9 58:33569 59:499
+[0 - 7f40fdab4000]   62.973045 {3}{RequestManager}: Committed tokens: 0:50 1:51 2:52 3:53 4:54 5:55 6:56 7:57 8:58
+[0 - 7f40fdab4000]   62.973056 {3}{RequestManager}: Verified: 51:4 52:85 53:16 54:10
+[0 - 7f40fdab4000]   62.973062 {3}{RequestManager}: New committed: 0:50 1:51 2:52 3:53
+[0 - 7f40fdab4000]   62.973066 {3}{RequestManager}: Number of Verified Tokens = 4
+[0 - 7f40fdab4000]   62.973136 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples, of modern shopping malls and ancient markets, of high-tech industry and ancient crafts. It is a
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   63.168752 {3}{RequestManager}: SSMs inference time:0.00344199s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   63.170160 {3}{RequestManager}: LLM Tree Verification time:0.00141452s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   63.170231 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   63.170243 {3}{RequestManager}: Input tree: 54:10 55:343 56:9 57:33569 58:4 59:85 60:16 61:10 62:343
+[0 - 7f40fdab4000]   63.170252 {3}{RequestManager}: Output tree: 55:343 56:9 57:33569 58:6 59:50118 60:16 61:10 62:343 63:9
+[0 - 7f40fdab4000]   63.170260 {3}{RequestManager}: Committed tokens: 0:54 1:55 2:56 3:57 4:58 5:59 6:60 7:61 8:62
+[0 - 7f40fdab4000]   63.170270 {3}{RequestManager}: Verified: 55:343 56:9 57:33569 58:6
+[0 - 7f40fdab4000]   63.170276 {3}{RequestManager}: New committed: 0:54 1:55 2:56 3:57
+[0 - 7f40fdab4000]   63.170280 {3}{RequestManager}: Number of Verified Tokens = 4
+[0 - 7f40fdab4000]   63.170355 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples, of modern shopping malls and ancient markets, of high-tech industry and ancient crafts. It is a city of contrasts,
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   63.386699 {3}{RequestManager}: SSMs inference time:0.003399s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   63.388097 {3}{RequestManager}: LLM Tree Verification time:0.00140445s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   63.388189 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   63.388201 {3}{RequestManager}: Input tree: 58:6 59:19 60:63 61:4066 62:750 63:8 64:63 65:4066 66:2040
+[0 - 7f40fdab4000]   63.388209 {3}{RequestManager}: Output tree: 59:53 60:10 61:2297 62:750 63:8 64:63 65:2297 66:2040 67:4
+[0 - 7f40fdab4000]   63.388218 {3}{RequestManager}: Committed tokens: 0:58 1:59 2:60 3:61 4:62 5:63 6:64 7:65 8:66
+[0 - 7f40fdab4000]   63.388224 {3}{RequestManager}: Verified: 59:53
+[0 - 7f40fdab4000]   63.388229 {3}{RequestManager}: New committed: 0:58
+[0 - 7f40fdab4000]   63.388245 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7f40fdab4000]   63.388330 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples, of modern shopping malls and ancient markets, of high-tech industry and ancient crafts. It is a city of contrasts, but
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   63.605747 {3}{RequestManager}: SSMs inference time:0.00347731s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   63.607229 {3}{RequestManager}: LLM Tree Verification time:0.00148907s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   63.607305 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   63.607316 {3}{RequestManager}: Input tree: 59:53 60:24 61:16 62:67 63:10 64:343 65:9 66:33569 67:4
+[0 - 7f40fdab4000]   63.607325 {3}{RequestManager}: Output tree: 60:24 61:16 62:67 63:10 64:343 65:9 66:33569 67:11 68:50118
+[0 - 7f40fdab4000]   63.607333 {3}{RequestManager}: Committed tokens: 0:59 1:60 2:61 3:62 4:63 5:64 6:65 7:66 8:67
+[0 - 7f40fdab4000]   63.607345 {3}{RequestManager}: Verified: 60:24 61:16 62:67 63:10 64:343 65:9 66:33569 67:11
+[0 - 7f40fdab4000]   63.607352 {3}{RequestManager}: New committed: 0:59 1:60 2:61 3:62 4:63 5:64 6:65 7:66
+[0 - 7f40fdab4000]   63.607356 {3}{RequestManager}: Number of Verified Tokens = 8
+[0 - 7f40fdab4000]   63.607458 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples, of modern shopping malls and ancient markets, of high-tech industry and ancient crafts. It is a city of contrasts, but it is also a city of contrasts in
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   63.796533 {3}{RequestManager}: SSMs inference time:0.00347025s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   63.797944 {3}{RequestManager}: LLM Tree Verification time:0.00141709s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   63.798014 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   63.798026 {3}{RequestManager}: Input tree: 67:11 68:1110 69:9 70:63 71:5845 72:4 73:50118 74:50118 75:3609
+[0 - 7f40fdab4000]   63.798034 {3}{RequestManager}: Output tree: 68:5 69:9 70:63 71:82 72:4 73:50118 74:50118 75:3609 76:260
+[0 - 7f40fdab4000]   63.798042 {3}{RequestManager}: Committed tokens: 0:67 1:68 2:69 3:70 4:71 5:72 6:73 7:74 8:75
+[0 - 7f40fdab4000]   63.798048 {3}{RequestManager}: Verified: 68:5
+[0 - 7f40fdab4000]   63.798053 {3}{RequestManager}: New committed: 0:67
+[0 - 7f40fdab4000]   63.798057 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7f40fdab4000]   63.798146 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples, of modern shopping malls and ancient markets, of high-tech industry and ancient crafts. It is a city of contrasts, but it is also a city of contrasts in the
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   63.985331 {3}{RequestManager}: SSMs inference time:0.00353734s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   63.986781 {3}{RequestManager}: LLM Tree Verification time:0.0014566s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   63.986857 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   63.986870 {3}{RequestManager}: Input tree: 68:5 69:1472 70:14 71:24 72:16 73:10 74:343 75:9 76:33569
+[0 - 7f40fdab4000]   63.986879 {3}{RequestManager}: Output tree: 69:169 70:14 71:24 72:16 73:10 74:343 75:9 76:33569 77:4
+[0 - 7f40fdab4000]   63.986887 {3}{RequestManager}: Committed tokens: 0:68 1:69 2:70 3:71 4:72 5:73 6:74 7:75 8:76
+[0 - 7f40fdab4000]   63.986893 {3}{RequestManager}: Verified: 69:169
+[0 - 7f40fdab4000]   63.986898 {3}{RequestManager}: New committed: 0:68
+[0 - 7f40fdab4000]   63.986901 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7f40fdab4000]   63.986997 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples, of modern shopping malls and ancient markets, of high-tech industry and ancient crafts. It is a city of contrasts, but it is also a city of contrasts in the way
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   64.176125 {3}{RequestManager}: SSMs inference time:0.00343812s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   64.177532 {3}{RequestManager}: LLM Tree Verification time:0.00141225s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   64.177601 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   64.177612 {3}{RequestManager}: Input tree: 69:169 70:24 71:16 72:9568 73:30 74:5 75:1111 76:4 77:50118
+[0 - 7f40fdab4000]   64.177621 {3}{RequestManager}: Output tree: 70:14 71:16 72:2984 73:30 74:13555 75:751 76:4 77:50118 78:50118
+[0 - 7f40fdab4000]   64.177630 {3}{RequestManager}: Committed tokens: 0:69 1:70 2:71 3:72 4:73 5:74 6:75 7:76 8:77
+[0 - 7f40fdab4000]   64.177636 {3}{RequestManager}: Verified: 70:14
+[0 - 7f40fdab4000]   64.177642 {3}{RequestManager}: New committed: 0:69
+[0 - 7f40fdab4000]   64.177645 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7f40fdab4000]   64.177740 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples, of modern shopping malls and ancient markets, of high-tech industry and ancient crafts. It is a city of contrasts, but it is also a city of contrasts in the way that
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   64.400082 {3}{RequestManager}: SSMs inference time:0.0034963s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   64.401530 {3}{RequestManager}: LLM Tree Verification time:0.00145426s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   64.401601 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   64.401613 {3}{RequestManager}: Input tree: 70:14 71:24 72:16 73:10 74:343 75:9 76:33569 77:4 78:50118
+[0 - 7f40fdab4000]   64.401621 {3}{RequestManager}: Output tree: 71:24 72:16 73:10 74:343 75:9 76:33569 77:4 78:50118 79:50118
+[0 - 7f40fdab4000]   64.401629 {3}{RequestManager}: Committed tokens: 0:70 1:71 2:72 3:73 4:74 5:75 6:76 7:77 8:78
+[0 - 7f40fdab4000]   64.401642 {3}{RequestManager}: Verified: 71:24 72:16 73:10 74:343 75:9 76:33569 77:4 78:50118 79:50118
+[0 - 7f40fdab4000]   64.401650 {3}{RequestManager}: New committed: 0:70 1:71 2:72 3:73 4:74 5:75 6:76 7:77 8:78
+[0 - 7f40fdab4000]   64.401654 {3}{RequestManager}: Number of Verified Tokens = 9
+[0 - 7f40fdab4000]   64.401747 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples, of modern shopping malls and ancient markets, of high-tech industry and ancient crafts. It is a city of contrasts, but it is also a city of contrasts in the way that it is a city of contrasts.
+
+
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   64.627022 {3}{RequestManager}: SSMs inference time:0.00351381s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   64.628480 {3}{RequestManager}: LLM Tree Verification time:0.0014647s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   64.628555 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   64.628567 {3}{RequestManager}: Input tree: 79:50118 80:133 81:343 82:9 83:33569 84:16 85:5 86:343 87:9
+[0 - 7f40fdab4000]   64.628575 {3}{RequestManager}: Output tree: 80:3609 81:343 82:16 83:7137 84:16 85:10 86:343 87:9 88:33569
+[0 - 7f40fdab4000]   64.628584 {3}{RequestManager}: Committed tokens: 0:79 1:80 2:81 3:82 4:83 5:84 6:85 7:86 8:87
+[0 - 7f40fdab4000]   64.628591 {3}{RequestManager}: Verified: 80:3609
+[0 - 7f40fdab4000]   64.628595 {3}{RequestManager}: New committed: 0:79
+[0 - 7f40fdab4000]   64.628599 {3}{RequestManager}: Number of Verified Tokens = 1
+[0 - 7f40fdab4000]   64.628694 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples, of modern shopping malls and ancient markets, of high-tech industry and ancient crafts. It is a city of contrasts, but it is also a city of contrasts in the way that it is a city of contrasts.
+
+Sh
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   64.828946 {3}{RequestManager}: SSMs inference time:0.00348802s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   64.830397 {3}{RequestManager}: LLM Tree Verification time:0.00145812s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   64.830468 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   64.830479 {3}{RequestManager}: Input tree: 80:3609 81:260 82:43673 83:16 84:10 85:343 86:9 87:33569 88:4
+[0 - 7f40fdab4000]   64.830487 {3}{RequestManager}: Output tree: 81:260 82:43673 83:16 84:10 85:343 86:9 87:33569 88:4 89:85
+[0 - 7f40fdab4000]   64.830495 {3}{RequestManager}: Committed tokens: 0:80 1:81 2:82 3:83 4:84 5:85 6:86 7:87 8:88
+[0 - 7f40fdab4000]   64.830508 {3}{RequestManager}: Verified: 81:260 82:43673 83:16 84:10 85:343 86:9 87:33569 88:4 89:85
+[0 - 7f40fdab4000]   64.830516 {3}{RequestManager}: New committed: 0:80 1:81 2:82 3:83 4:84 5:85 6:86 7:87 8:88
+[0 - 7f40fdab4000]   64.830519 {3}{RequestManager}: Number of Verified Tokens = 9
+[0 - 7f40fdab4000]   64.830623 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples, of modern shopping malls and ancient markets, of high-tech industry and ancient crafts. It is a city of contrasts, but it is also a city of contrasts in the way that it is a city of contrasts.
+
+Shanghai is a city of contrasts. It
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   65.020298 {3}{RequestManager}: SSMs inference time:0.0035513s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   65.021754 {3}{RequestManager}: LLM Tree Verification time:0.00146305s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   65.021828 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   65.021842 {3}{RequestManager}: Input tree: 89:85 90:16 91:10 92:343 93:9 94:29479 95:8645 96:268 97:8
+[0 - 7f40fdab4000]   65.021851 {3}{RequestManager}: Output tree: 90:16 91:10 92:343 93:9 94:29479 95:8645 96:268 97:8 98:8178
+[0 - 7f40fdab4000]   65.021860 {3}{RequestManager}: Committed tokens: 0:89 1:90 2:91 3:92 4:93 5:94 6:95 7:96 8:97
+[0 - 7f40fdab4000]   65.021873 {3}{RequestManager}: Verified: 90:16 91:10 92:343 93:9 94:29479 95:8645 96:268 97:8 98:8178
+[0 - 7f40fdab4000]   65.021881 {3}{RequestManager}: New committed: 0:89 1:90 2:91 3:92 4:93 5:94 6:95 7:96 8:97
+[0 - 7f40fdab4000]   65.021885 {3}{RequestManager}: Number of Verified Tokens = 9
+[0 - 7f40fdab4000]   65.022000 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples, of modern shopping malls and ancient markets, of high-tech industry and ancient crafts. It is a city of contrasts, but it is also a city of contrasts in the way that it is a city of contrasts.
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   65.243536 {3}{RequestManager}: SSMs inference time:0.00355541s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   65.244997 {3}{RequestManager}: LLM Tree Verification time:0.00146877s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   65.245073 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   65.245087 {3}{RequestManager}: Input tree: 98:8178 99:31168 100:6 101:9 102:2297 103:3482 104:21829 105:8 106:8178
+[0 - 7f40fdab4000]   65.245097 {3}{RequestManager}: Output tree: 99:31168 100:6 101:9 102:2297 103:3482 104:21829 105:8 106:8178 107:1048
+[0 - 7f40fdab4000]   65.245105 {3}{RequestManager}: Committed tokens: 0:98 1:99 2:100 3:101 4:102 5:103 6:104 7:105 8:106
+[0 - 7f40fdab4000]   65.245119 {3}{RequestManager}: Verified: 99:31168 100:6 101:9 102:2297 103:3482 104:21829 105:8 106:8178 107:1048
+[0 - 7f40fdab4000]   65.245128 {3}{RequestManager}: New committed: 0:98 1:99 2:100 3:101 4:102 5:103 6:104 7:105 8:106
+[0 - 7f40fdab4000]   65.245132 {3}{RequestManager}: Number of Verified Tokens = 9
+[0 - 7f40fdab4000]   65.245271 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples, of modern shopping malls and ancient markets, of high-tech industry and ancient crafts. It is a city of contrasts, but it is also a city of contrasts in the way that it is a city of contrasts.
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples, of modern shopping malls and ancient markets
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   65.465599 {3}{RequestManager}: SSMs inference time:0.0034843s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   65.467038 {3}{RequestManager}: LLM Tree Verification time:0.00144715s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   65.467130 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   65.467143 {3}{RequestManager}: Input tree: 107:1048 108:6 109:9 110:239 111:12 112:9406 113:539 114:8 115:8178
+[0 - 7f40fdab4000]   65.467152 {3}{RequestManager}: Output tree: 108:6 109:9 110:239 111:12 112:9406 113:539 114:8 115:8178 116:16196
+[0 - 7f40fdab4000]   65.467161 {3}{RequestManager}: Committed tokens: 0:107 1:108 2:109 3:110 4:111 5:112 6:113 7:114 8:115
+[0 - 7f40fdab4000]   65.467173 {3}{RequestManager}: Verified: 108:6 109:9 110:239 111:12 112:9406 113:539 114:8 115:8178 116:16196
+[0 - 7f40fdab4000]   65.467182 {3}{RequestManager}: New committed: 0:107 1:108 2:109 3:110 4:111 5:112 6:113 7:114 8:115
+[0 - 7f40fdab4000]   65.467186 {3}{RequestManager}: Number of Verified Tokens = 9
+[0 - 7f40fdab4000]   65.467315 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples, of modern shopping malls and ancient markets, of high-tech industry and ancient crafts. It is a city of contrasts, but it is also a city of contrasts in the way that it is a city of contrasts.
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples, of modern shopping malls and ancient markets, of high-tech industry and ancient crafts
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   65.689409 {3}{RequestManager}: SSMs inference time:0.00346431s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   65.690825 {3}{RequestManager}: LLM Tree Verification time:0.00142186s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   65.690898 {3}{RequestManager}: Input tree size (9) Output tree size (9)
+[0 - 7f40fdab4000]   65.690910 {3}{RequestManager}: Input tree: 116:16196 117:4 118:85 119:16 120:10 121:343 122:9 123:33569 124:6
+[0 - 7f40fdab4000]   65.690918 {3}{RequestManager}: Output tree: 117:4 118:85 119:16 120:10 121:343 122:9 123:33569 124:6 125:53
+[0 - 7f40fdab4000]   65.690926 {3}{RequestManager}: Committed tokens: 0:116 1:117 2:118 3:119 4:120 5:121 6:122 7:123 8:124
+[0 - 7f40fdab4000]   65.690939 {3}{RequestManager}: Verified: 117:4 118:85 119:16 120:10 121:343 122:9 123:33569 124:6 125:53
+[0 - 7f40fdab4000]   65.690947 {3}{RequestManager}: New committed: 0:116 1:117 2:118 3:119 4:120 5:121 6:122 7:123 8:124
+[0 - 7f40fdab4000]   65.690951 {3}{RequestManager}: Number of Verified Tokens = 9
+[0 - 7f40fdab4000]   65.691088 {3}{RequestManager}: Output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples, of modern shopping malls and ancient markets, of high-tech industry and ancient crafts. It is a city of contrasts, but it is also a city of contrasts in the way that it is a city of contrasts.
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples, of modern shopping malls and ancient markets, of high-tech industry and ancient crafts. It is a city of contrasts, but
+
+############### prepare_next_batch_verify ###############
+[Verify] Request 1000000 is running
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   65.922028 {3}{RequestManager}: SSMs inference time:0.00345731s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   65.923466 {3}{RequestManager}: LLM Tree Verification time:0.00144736s.
+
+############### prepare_next_batch_init ###############
+[ 1000000 ]
+[0 - 7f40fdab4000]   65.923547 {3}{RequestManager}: Input tree size (3) Output tree size (3)
+[0 - 7f40fdab4000]   65.923558 {3}{RequestManager}: Input tree: 125:53 126:24 127:16
+[0 - 7f40fdab4000]   65.923565 {3}{RequestManager}: Output tree: 126:24 127:16 128:67
+[0 - 7f40fdab4000]   65.923571 {3}{RequestManager}: Committed tokens: 0:125 1:126 2:127
+[0 - 7f40fdab4000]   65.923580 {3}{RequestManager}: Verified: 126:24 127:16 128:67
+[0 - 7f40fdab4000]   65.923586 {3}{RequestManager}: New committed: 0:125 1:126 2:127
+[0 - 7f40fdab4000]   65.923590 {3}{RequestManager}: Number of Verified Tokens = 3
+[0 - 7f40fdab4000]   65.923594 {3}{RequestManager}: [Done] guid(1000000) with final length(128)
+[0 - 7f40fdab4000]   65.923741 {3}{RequestManager}: Final output: </s>Here are some travel tips for Shanghai: n/a
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples, of modern shopping malls and ancient markets, of high-tech industry and ancient crafts. It is a city of contrasts, but it is also a city of contrasts in the way that it is a city of contrasts.
+
+Shanghai is a city of contrasts. It is a city of skyscrapers and ancient temples, of modern shopping malls and ancient markets, of high-tech industry and ancient crafts. It is a city of contrasts, but it is
+[0 - 7f40fdab4000]   65.923753 {3}{RequestManager}: [Profile] guid(1000000) decoding_steps(36) start(57739850.0) finish(65923743.0) latency(8183893.0)
+
+############### prepare_next_batch_verify ###############
+========== prepare_next_batch_init ==========
+========== SSMs inference ==========
+========== Token Tree Verification ==========
+[0 - 7f40fdab4000]   66.015544 {3}{RequestManager}: SSMs inference time:0.00352245s.
+========== prepare_next_batch_verify ==========
+[0 - 7f40fdab4000]   66.016964 {3}{RequestManager}: LLM Tree Verification time:0.00142691s.
+
+############### prepare_next_batch_init ###############
+
+############### prepare_next_batch_verify ###############
+
+############### prepare_next_batch_init ###############
+
+############### prepare_next_batch_verify ###############
+
+############### prepare_next_batch_init ###############
+
+############### prepare_next_batch_verify ###############
+
+############### prepare_next_batch_init ###############
+
+############### prepare_next_batch_verify ###############
+----------inference finished--------------
