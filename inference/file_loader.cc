@@ -150,7 +150,7 @@ void load_attention_bias_v2(DT *ptr,
   int idx = 0;
 
   for (auto filename : bias_files) {
-    std::cout << "Loading weight file " << filename << std::endl;
+    // std::cout << "Loading weight file " << filename << std::endl;
     std::string weight_filepath = join_path({weights_folder, filename});
 
     int n_heads = file_index == 0 ? num_heads : num_kv_heads;
@@ -244,7 +244,7 @@ void load_attention_weights_v2(DT *ptr,
   size_t stride_size = (q_size + v_replicate_size + k_replicate_size + o_size) /
                        tensor_parallelism_degree;
   for (auto filename : weight_filenames) {
-    std::cout << "Loading weight file " << filename << std::endl;
+    // std::cout << "Loading weight file " << filename << std::endl;
     std::string weight_filepath = join_path({weights_folder, filename});
 
     int data_index = 0;
@@ -299,7 +299,7 @@ void load_attention_weights_v2(DT *ptr,
                            tensor_parallelism_degree);
 
   {
-    std::cout << "Loading weight file " << o_file << std::endl;
+    // std::cout << "Loading weight file " << o_file << std::endl;
     std::string weight_filepath = join_path({weights_folder, o_file});
 
     std::ifstream in(weight_filepath, std::ios::in | std::ios::binary);
@@ -423,7 +423,7 @@ void load_attention_weights_quantized(char *ptr,
 
   // q, k, v, o -> 0, 1, 2, 3
   for (auto filename : weight_filenames) {
-    std::cout << "Loading weight file " << filename << std::endl;
+    // std::cout << "Loading weight file " << filename << std::endl;
     std::string weight_filepath = join_path({weights_folder, filename});
 
     size_t partial_size = one_weight_file_size;
@@ -473,7 +473,7 @@ void load_attention_weights_quantized(char *ptr,
   size_t offset = data_type == DT_INT8 ? one_weight_file_size * 4
                                        : (one_weight_file_size * 4) / 2;
   for (auto filename : weight_filenames) {
-    std::cout << "Loading weight file " << filename << std::endl;
+    // std::cout << "Loading weight file " << filename << std::endl;
     std::string weight_filepath = join_path({weights_folder, filename});
 
     for (int i = 0; i < 2; i++) {
@@ -765,7 +765,7 @@ void FileDataLoader::load_single_weight_tensor(FFModel *ff,
     weight_filename += (weight_idx == 0)
                            ? "_attn_bias"
                            : ((weight_idx == 1) ? "_weight" : "_bias");
-    std::cout << "Loading weight file " << weight_filename << std::endl;
+    // std::cout << "Loading weight file " << weight_filename << std::endl;
     std::string weight_filepath = join_path({weights_folder, weight_filename});
     load_from_file(data, volume, weight_filepath);
   } else {
@@ -775,7 +775,7 @@ void FileDataLoader::load_single_weight_tensor(FFModel *ff,
     if (weight_filename != "embed_tokens_weight_lm_head") {
       weight_filename += weight_idx == 0 ? "_weight" : "_bias";
     }
-    std::cout << "Loading weight file " << weight_filename << std::endl;
+    // std::cout << "Loading weight file " << weight_filename << std::endl;
     std::string weight_filepath = join_path({weights_folder, weight_filename});
     load_from_file(data, volume, weight_filepath);
   }

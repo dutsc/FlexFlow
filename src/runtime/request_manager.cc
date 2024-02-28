@@ -31,6 +31,8 @@ struct prepareNextBatchBeamParam {
     size_t SSMIndex; // SSM的index 
     // 可以添加更多参数
 };
+prepareNextBatchBeamParam pnbbp;
+
 
 using namespace Legion;
 using tokenizers::Tokenizer;
@@ -558,6 +560,7 @@ BeamSearchBatchConfig
     RequestManager::prepare_next_batch_init(TreeVerifyBatchConfig const &old_bc,
                                             InferenceResult const &result,
                                             int model_id) {
+  // 此时 模型推理已经完成，传入的result变量中就包含了本轮模型推理生成的新token的结果
   const std::lock_guard<std::mutex> lock(request_queue_mutex);
   if (verbose) {
     std::cout << "\n############### prepare_next_batch_init ###############\n";
@@ -571,22 +574,28 @@ BeamSearchBatchConfig
   new_bc.model_id = model_id;
   int result_index = 0;
 
-  for (int i = 0; i < BatchConfig::max_requests_per_batch(); i++) {
+  // 遍历旧批次配置中的请求，如果请求已完成，则跳过；否则，将请求中的令牌与推断结果进行比对，并更新请求的状态。
+  for (int i = 0; i < BatchConfig::max_requests_per_batch(); i++) {  // 批次中request的最大数量是 BatchConfig::max_requests_per_batch()
+    // 如果请求已完成，则跳过
     if (old_bc.request_completed[i]) {
       continue;
     }
+
+    // 否则，将请求中的令牌与推断结果进行比对，并更新请求的状态
+
+    // 获取该请求的guid 以及获取请求对象Request 
     size_t guid = old_bc.requestsInfo[i].request_guid;
     Request &request = all_requests[guid];
-
     std::cout << "[ " << guid << " ]" << std::endl;
 
     // Verify this: get verified tokens from result
+    // 初始化 tree_outputs 
     std::vector<std::pair<BatchConfig::TokenId, int>> tree_outputs =
         std::vector<std::pair<BatchConfig::TokenId, int>>();
 
     assert(old_bc.num_tokens > 0);
 
-    // reset committed_tokens
+    // 清空 committed_tokens  
     if (committed_tokens.count(guid) == 0) {
       committed_tokens[guid] = {};
     } else {
@@ -594,14 +603,20 @@ BeamSearchBatchConfig
     }
 
     // iterate through all the tokens that belong to request i
+    // -1 根节点的绝对深度为0
     int root_abs_depth = request.tokens.size() - 1;
 
+    log_req_mgr.print() << "request.tokens.size(): " << request.tokens.size(); 
+    log_req_mgr.print() << "old_bc.num_tokens: " << old_bc.num_tokens; 
+
+    // 一次while循环处理一个token 其实就是遍历old_bc中的所有token
     while (result_index < old_bc.num_tokens &&
            old_bc.tokensInfo[result_index].request_index == i) {
+      // 获取token的depth和id
       int abs_depth = old_bc.tokensInfo[result_index].abs_depth_in_request;
       int token_id = result.token_ids[result_index];
 
-      if (request.status == Request::PENDING) {
+      if (request.status == Request::PENDING) { // 请求PENDING表示请求还没有进行首轮处理 所以跳过tree_outputs
         committed_tokens[guid].emplace_back(abs_depth, result_index);
       } else if (abs_depth >= root_abs_depth) {
         tree_outputs.emplace_back(token_id, abs_depth + 1);
@@ -757,7 +772,7 @@ BeamSearchBatchConfig
           // Add verified token to request's token list
           request.tokens.push_back(token.first);
 
-          if (new_bc.num_tokens == get_max_tokens_per_batch()) {
+          if (new_bc.num_tokens == get_max_tokens_per_batch()) { // 批次中token的最大数量
             break;
           }
         }
@@ -787,7 +802,7 @@ BeamSearchBatchConfig
           old_bc.requestsInfo[i].max_sequence_length;
       new_bc.requestsInfo[i].num_tokens_in_batch = 0;
 
-      // TODO: Beam Request Info, missing from VerifyTreeBatchConfig
+      // TO DO: Beam Request Info, missing from VerifyTreeBatchConfig
       new_bc.beamRequestsInfo[i].current_depth = 1;
       new_bc.beamRequestsInfo[i].beam_size =
           BeamSearchBatchConfig::MAX_BEAM_WIDTH;
@@ -910,8 +925,8 @@ BeamSearchBatchConfig
 /***** Beam Search Phase *****/
 BeamSearchBatchConfigFuture RequestManager::prepare_next_batch_beam(
     BeamSearchBatchConfigFuture const &old_bc,
-    BeamInferenceResultFuture const &result
-    // size_t i // SSM的索引
+    BeamInferenceResultFuture const &result,
+    size_t i // SSM的索引
     ) {
   
   auto t0 = std::chrono::high_resolution_clock::now();
@@ -919,14 +934,15 @@ BeamSearchBatchConfigFuture RequestManager::prepare_next_batch_beam(
   Context ctx = Runtime::get_context();
 
   RequestManager *rm = this;
-  // prepareNextBatchBeamParam *pnbbp;
-  // pnbbp->rm = this;
-  // pnbbp->SSMIndex = i;
-  TaskLauncher launcher(RM_PREPARE_NEXT_BATCH_BEAM_TASK_ID,
-                        TaskArgument(&rm, sizeof(RequestManager *)));
-  // sc_add
+  pnbbp.rm = this;
+  pnbbp.SSMIndex = i;
+  log_req_mgr.print() << "(before) get_num_ssms: " << rm->get_num_ssms();
+ 
   // TaskLauncher launcher(RM_PREPARE_NEXT_BATCH_BEAM_TASK_ID,
-  //                       TaskArgument(&pnbbp, sizeof(prepareNextBatchBeamParam *)));
+  //                       TaskArgument(&rm, sizeof(RequestManager *)));
+  // sc_add
+  TaskLauncher launcher(RM_PREPARE_NEXT_BATCH_BEAM_TASK_ID,
+                        TaskArgument(&pnbbp, sizeof(prepareNextBatchBeamParam)));
   launcher.add_future(old_bc);
   launcher.add_future(result);
   auto t1 = std::chrono::high_resolution_clock::now();
@@ -943,7 +959,15 @@ BeamSearchBatchConfig RequestManager::prepare_next_batch_beam_task(
       // 如果在inference时阻塞，则prepare_next_batch_beam_task时间仅有 20us，再加上prepare_next_batch_beam执行时间为几us
   auto t0 = std::chrono::high_resolution_clock::now();
 
-  RequestManager *rm = *((RequestManager **)task->args);
+  // RequestManager *rm = *((RequestManager **)task->args);
+  // sc_add
+  prepareNextBatchBeamParam *pnbbp = ((prepareNextBatchBeamParam *)task->args);
+  RequestManager *rm = pnbbp->rm;
+  size_t SSMIndex = pnbbp->SSMIndex;
+  log_req_mgr.print() << "SSMIndex: " << SSMIndex; 
+  // log_req_mgr.print() << "(after) get_num_ssms: " << rm->get_num_ssms();
+
+
   BeamSearchBatchConfig const &bc =
       Future(task->futures[0]).get_result<BeamSearchBatchConfig>();
   log_req_mgr.print() << "Enter prepare_next_batch_beam_task.";
@@ -958,7 +982,7 @@ BeamSearchBatchConfig RequestManager::prepare_next_batch_beam_task(
     // 将时间转换为微秒
   auto microseconds = std::chrono::duration_cast<std::chrono::microseconds>(timeSinceEpoch);
     // 输出微秒数
-  log_req_mgr.print() << "current time microseconds: " << microseconds.count();
+  log_req_mgr.print() << SSMIndex <<" : current time microseconds: " << microseconds.count();
 
   auto elapsed1 = std::chrono::duration_cast<std::chrono::nanoseconds>(t2 - t1);
   auto elapsed2 = std::chrono::duration_cast<std::chrono::nanoseconds>(t2 - t0);
@@ -977,6 +1001,8 @@ BeamSearchBatchConfig
   if (verbose) {
     std::cout << "\n############### prepare_next_batch_beam ###############\n";
   }
+  std::cout << "\n############### prepare_next_batch_beam ###############\n";
+
   if (verbose) {
     std::cout << "print all results"
               << "\n";
@@ -1189,6 +1215,10 @@ TreeVerifyBatchConfig RequestManager::prepare_next_batch_verify(
   const std::lock_guard<std::mutex> lock(request_queue_mutex);
 
   std::cout << "\n############### prepare_next_batch_verify ###############\n";
+  for (int i = 0; i < old_batches.size(); i++){
+      log_req_mgr.print() << "old_batches print():" ;
+      old_batches[i].print();
+  }
 
   assert(old_batches.size() > 0);
   log_req_mgr.print() << "old_batches.size(): " << old_batches.size();
@@ -1223,6 +1253,7 @@ TreeVerifyBatchConfig RequestManager::prepare_next_batch_verify(
     log_req_mgr.print() << "request.status: " << request.status << " ,Request::RUNNING: " << Request::RUNNING;
     if (request.status == Request::RUNNING) {
       new_bc.request_running[i] = true;
+      // 一次完整的投机推理 每一个SSM对应的request.guid是相同的
       std::cout << "[Verify] Request " << request.guid << " is running"
                 << std::endl;
 
@@ -1239,11 +1270,29 @@ TreeVerifyBatchConfig RequestManager::prepare_next_batch_verify(
             traverse_beam_tree(old_batches.at(j), i, request.tokens.size() - 1);
         all_dfs_trees.push_back(new_tree);
       }
+
+      // 打印 all_dfs_trees 内容  all_dfs_trees[i]就是第i个SSM的推理结果
+      log_req_mgr.print() << "all_dfs_trees:" ;
+      for (const auto &inner_vec : all_dfs_trees) {
+          // 打印每个内部 vector 中的键值对
+          for (const auto &pair : inner_vec) {
+              log_req_mgr.print() << "(TokenId:" << pair.first << ", " << pair.second << ") " ;
+          }
+          std::cout << std::endl;  // 换行表示一个内部 vector 结束
+      }
+
       assert(all_dfs_trees.size() == old_batches.size());
 
       // 合并tree的操作 将二维数组合并成为一维数组
       std::vector<std::pair<BatchConfig::TokenId, int>> dfs_tree_inputs =
           merge_dfs_trees(all_dfs_trees, request.tokens.size() - 1, guid);
+
+      // 打印合并后的 dfs_tree_inputs 输入数组
+      log_req_mgr.print() << "dfs_tree_inputs:" ;
+      for (const auto &pair : dfs_tree_inputs) {
+              log_req_mgr.print() << "(TokenId:" << pair.first << ", " << pair.second << ") " ;
+          }
+      std::cout << std::endl;
 
       if (verbose) {
         std::cout << "Request Tokens Size: " << request.tokens.size()
@@ -1438,7 +1487,8 @@ TreeVerifyBatchConfig RequestManager::prepare_next_batch_verify(
       assert(false && "Request status is not RUNNING or PENDING");
     }
   }
-  log_req_mgr.print() << "new_bc : " << new_bc ;
+  log_req_mgr.print() << "new_bc : ";
+  new_bc.print();
   return new_bc;
 }
 
@@ -1677,7 +1727,7 @@ bool PreOrder(
 }
 
 std::vector<std::pair<BatchConfig::TokenId, int>>
-    RequestManager::traverse_verify_tree(
+    RequestManager::  traverse_verify_tree(
         size_t guid,
         std::vector<std::pair<BatchConfig::TokenId, int>> const
             &inputSerializedTree,
@@ -1702,7 +1752,7 @@ std::vector<std::pair<BatchConfig::TokenId, int>>
     log_req_mgr.print("Input tree:%s", oss.str().c_str());
   }
   { // Output tree
-    // log_req_mgr.print("========Output============");
+    log_req_mgr.print("========Output============");
     // outputSerializedTree is an array of (token id, depth + 1) pairs
     std::ostringstream oss;
     for (auto const &pair : outputSerializedTree) {
@@ -1712,7 +1762,7 @@ std::vector<std::pair<BatchConfig::TokenId, int>>
     log_req_mgr.print("Output tree:%s", oss.str().c_str());
   }
   {
-    // log_req_mgr.print("========Committed============");
+    log_req_mgr.print("========Committed============");
     //  committed_tokens[guid] is an array of (depth, result_index) pairs for
     //  the given request
     std::ostringstream oss;
@@ -1732,7 +1782,7 @@ std::vector<std::pair<BatchConfig::TokenId, int>>
     auto output = outputSerializedTree.at(i);
 
     if (i == 0) {
-      verifiedTree.push_back(output);
+      verifiedTree.push_back(output); 
       new_committed_tokens.push_back(std::make_pair(
           input.second,
           committed_tokens.at(guid).at(i).second)); // <input_abs_depth,
@@ -1746,7 +1796,7 @@ std::vector<std::pair<BatchConfig::TokenId, int>>
     }
 
     if (input.first == verifiedTree.back().first &&
-        input.second == verifiedTree.back().second) {
+        input.second == verifiedTree.back().second) {  // 其实就是 input == verifiedTree.back()
       verifiedTree.push_back(output);
       new_committed_tokens.push_back(std::make_pair(
           input.second,
@@ -1757,7 +1807,7 @@ std::vector<std::pair<BatchConfig::TokenId, int>>
   }
   committed_tokens[guid] = new_committed_tokens;
   {
-    // log_req_mgr.print("========Verified============");
+    log_req_mgr.print("========Verified============");
     std::ostringstream oss;
     for (auto const &pair : verifiedTree) {
       // log_req_mgr.print("(%d, %d)", pair.first, pair.second);
@@ -1766,7 +1816,7 @@ std::vector<std::pair<BatchConfig::TokenId, int>>
     log_req_mgr.print("Verified:%s", oss.str().c_str());
   }
   {
-    // log_req_mgr.print("========New Committed============");
+    log_req_mgr.print("========New Committed============");
     std::ostringstream oss;
     for (auto const &pair : committed_tokens.at(guid)) {
       // log_req_mgr.print("(%d, %d)", pair.first, pair.second);
@@ -2034,11 +2084,19 @@ GenerationResult RequestManager::generate_spec_infer(
 
     // Start measuring time
     auto begin = std::chrono::high_resolution_clock::now();
-    log_req_mgr.print() << "Number of SSMs get_num_ssms(): " << get_num_ssms();
+    log_req_mgr.print() << "Number of SSMs get_num_ssms(): " << get_num_ssms(); // 这行代码运行了4次？
     for (size_t i = 0; i < get_num_ssms(); i++) {
       // 投机推理的步数 K == depth 
+      // int Depth = 0;
+      // if (i==0){ // ssm0 125m
+      //   Depth = 24;
+      // } else{
+      //   Depth = 16;
+      // }
       for (int depth = 0; depth < BeamSearchBatchConfig::MAX_BEAM_DEPTH;
            depth++) {
+      // for (int depth = 0; depth < Depth;
+      //      depth++) {
         beam_bcf = beam_bcf_vec[i];
         auto tt1 = std::chrono::high_resolution_clock::now();
         FutureMap fm = im->inference(get_model(i), 0, beam_bcf_vec[i]); // inference的返回值为FutureMap
@@ -2059,7 +2117,7 @@ GenerationResult RequestManager::generate_spec_infer(
 
         // 更新对应位置的bcf
         auto t1 = std::chrono::high_resolution_clock::now();
-        beam_bcf_vec[i] = prepare_next_batch_beam(beam_bcf_vec[i], beam_irf); // 给prepare_next_batch_beam加一个参数：SSM索引
+        beam_bcf_vec[i] = prepare_next_batch_beam(beam_bcf_vec[i], beam_irf,i); // 给prepare_next_batch_beam加一个参数：SSM索引
         auto t2 = std::chrono::high_resolution_clock::now();
         auto elapsed2 = std::chrono::duration_cast<std::chrono::nanoseconds>(t2-t1);
         log_req_mgr.print() << "(highest level)prepare_next_batch_beam time:" << elapsed2.count()* 1e-6 << " ms.";

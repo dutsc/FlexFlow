@@ -627,26 +627,26 @@ void FFModel::compile_inference() {
       }
     }
   }
-  for (size_t i = 0; i < operators.size(); i++) {
-    Op *op = operators[i];
-    printf("operator[%zu]: type(%d)\n", i, operators[i]->op_type);
-    for (int j = 0; j < op->numInputs; j++) {
-      LogicalRegion handle = op->inputs[j]->region;
-      printf("\tinputs[%d] region(%d,%d,%d)\n",
-             j,
-             handle.get_index_space().get_id(),
-             handle.get_field_space().get_id(),
-             handle.get_tree_id());
-    }
-    for (int j = 0; j < op->numOutputs; j++) {
-      LogicalRegion handle = op->outputs[j]->region;
-      printf("\toutputs[%d] region(%d,%d,%d)\n",
-             j,
-             handle.get_index_space().get_id(),
-             handle.get_field_space().get_id(),
-             handle.get_tree_id());
-    }
-  }
+  // for (size_t i = 0; i < operators.size(); i++) {
+  //   Op *op = operators[i];
+  //   printf("operator[%zu]: type(%d)\n", i, operators[i]->op_type);
+  //   for (int j = 0; j < op->numInputs; j++) {
+  //     LogicalRegion handle = op->inputs[j]->region;
+  //     printf("\tinputs[%d] region(%d,%d,%d)\n",
+  //            j,
+  //            handle.get_index_space().get_id(),
+  //            handle.get_field_space().get_id(),
+  //            handle.get_tree_id());
+  //   }
+  //   for (int j = 0; j < op->numOutputs; j++) {
+  //     LogicalRegion handle = op->outputs[j]->region;
+  //     printf("\toutputs[%d] region(%d,%d,%d)\n",
+  //            j,
+  //            handle.get_index_space().get_id(),
+  //            handle.get_field_space().get_id(),
+  //            handle.get_tree_id());
+  //   }
+  // }
 #ifdef FF_USE_NCCL
   for (size_t l = 0; l < operators.size(); l++) {
     // Only create nccl for allreduce and fusedop for inference

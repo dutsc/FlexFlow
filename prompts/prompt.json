@@ -1,4 +1,4 @@
 [
- "please introduce LeBron James, who plays basketball in NBA.\n",
- "please introduce Kobe Bryant, who played basketball in NBA.\n"
+    "please summarize these sentences: This paper introduces SpecInfer, a system that enhances the efficiency of serving generative large language models (LLMs) through tree-based speculative inference and verification. SpecInfer's innovative approach utilizes smaller speculative models to forecast the outputs of LLMs; these forecasts are structured into a token tree, with each node signifying a potential token sequence. The validity of all token sequences represented by the token tree is concurrently verified against the LLM using a cutting-edge tree-based parallel decoding mechanism. By employing an LLM as a token tree verifier rather than an incremental decoder, SpecInfer notably lowers the end-to-end latency and computational demands for deploying generative LLMs while ensuring the preservation of model quality. Evaluations indicate that SpecInfer surpasses current LLM serving systems by a factor of 1.5-2.8 for distributed LLM inference and 2.6-3.5 for offloading-based LLM inference, all the while maintaining equivalent generative capabilities. SpecInfer is openly accessible at the provided GitHub link.",
+    "Could you please give me some advice on programming?\n"
 ]

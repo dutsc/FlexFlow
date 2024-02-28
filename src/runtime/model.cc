@@ -3532,62 +3532,66 @@ void FFModel::compile(LossType loss_type,
         assert(found);
       }
     }
-    fprintf(stderr, "%zu operators after fusion...\n", operators.size());
-    for (size_t i = 0; i < operators.size(); i++) {
-      Op *op = operators[i];
-      printf("operator[%zu]: type(%s) guid(%lu)\n",
-             i,
-             get_operator_type_name(operators[i]->op_type).c_str(),
-             operators[i]->op_guid);
-      for (int j = 0; j < op->numInputs; j++) {
-        LogicalRegion handle = op->inputs[j]->region;
-        printf("\tinputs[%d] region(%d,%d,%d)\n",
-               j,
-               handle.get_index_space().get_id(),
-               handle.get_field_space().get_id(),
-               handle.get_tree_id());
-      }
-      for (int j = 0; j < op->numOutputs; j++) {
-        LogicalRegion handle = op->outputs[j]->region;
-        printf("\toutputs[%d] region(%d,%d,%d)\n",
-               j,
-               handle.get_index_space().get_id(),
-               handle.get_field_space().get_id(),
-               handle.get_tree_id());
-      }
-      for (int j = 0; j < op->numWeights; j++) {
-        LogicalRegion handle = op->weights[j]->region;
-        printf("\tweights[%d] region(%d,%d,%d)\n",
-               j,
-               handle.get_index_space().get_id(),
-               handle.get_field_space().get_id(),
-               handle.get_tree_id());
-      }
-    }
+
+    // fprintf(stderr, "%zu operators after fusion...\n", operators.size());
+    // for (size_t i = 0; i < operators.size(); i++) {
+    //   Op *op = operators[i];
+    //   printf("operator[%zu]: type(%s) guid(%lu)\n",
+    //          i,
+    //          get_operator_type_name(operators[i]->op_type).c_str(),
+    //          operators[i]->op_guid);
+    //   for (int j = 0; j < op->numInputs; j++) {
+    //     LogicalRegion handle = op->inputs[j]->region;
+    //     printf("\tinputs[%d] region(%d,%d,%d)\n",
+    //            j,
+    //            handle.get_index_space().get_id(),
+    //            handle.get_field_space().get_id(),
+    //            handle.get_tree_id());
+    //   }
+    //   for (int j = 0; j < op->numOutputs; j++) {
+    //     LogicalRegion handle = op->outputs[j]->region;
+    //     printf("\toutputs[%d] region(%d,%d,%d)\n",
+    //            j,
+    //            handle.get_index_space().get_id(),
+    //            handle.get_field_space().get_id(),
+    //            handle.get_tree_id());
+    //   }
+    //   for (int j = 0; j < op->numWeights; j++) {
+    //     LogicalRegion handle = op->weights[j]->region;
+    //     printf("\tweights[%d] region(%d,%d,%d)\n",
+    //            j,
+    //            handle.get_index_space().get_id(),
+    //            handle.get_field_space().get_id(),
+    //            handle.get_tree_id());
+    //   }
+    // }
+
   }
   Op *final_operator = get_final_operator();
   // FIXME: currently assume the final operator has exactly one output
   assert(final_operator->numOutputs == 1);
-  for (size_t i = 0; i < operators.size(); i++) {
-    Op *op = operators[i];
-    log_model.print("operator[%zu]: type(%d)", i, operators[i]->op_type);
-    for (int j = 0; j < op->numInputs; j++) {
-      LogicalRegion handle = op->inputs[j]->region;
-      log_model.print("\tinputs[%d] region(%d,%d,%d)",
-                      j,
-                      handle.get_index_space().get_id(),
-                      handle.get_field_space().get_id(),
-                      handle.get_tree_id());
-    }
-    for (int j = 0; j < op->numOutputs; j++) {
-      LogicalRegion handle = op->outputs[j]->region;
-      log_model.print("\toutputs[%d] region(%d,%d,%d)",
-                      j,
-                      handle.get_index_space().get_id(),
-                      handle.get_field_space().get_id(),
-                      handle.get_tree_id());
-    }
-  }
+
+  // for (size_t i = 0; i < operators.size(); i++) {
+  //   Op *op = operators[i];
+  //   log_model.print("operator[%zu]: type(%d)", i, operators[i]->op_type);
+  //   for (int j = 0; j < op->numInputs; j++) {
+  //     LogicalRegion handle = op->inputs[j]->region;
+  //     log_model.print("\tinputs[%d] region(%d,%d,%d)",
+  //                     j,
+  //                     handle.get_index_space().get_id(),
+  //                     handle.get_field_space().get_id(),
+  //                     handle.get_tree_id());
+  //   }
+  //   for (int j = 0; j < op->numOutputs; j++) {
+  //     LogicalRegion handle = op->outputs[j]->region;
+  //     log_model.print("\toutputs[%d] region(%d,%d,%d)",
+  //                     j,
+  //                     handle.get_index_space().get_id(),
+  //                     handle.get_field_space().get_id(),
+  //                     handle.get_tree_id());
+  //   }
+  // }
+
   // assert(final_operator->outputs[0].num_dims == 2);
   ParallelDim p_dims[MAX_TENSOR_DIM];
   int dims[MAX_TENSOR_DIM];

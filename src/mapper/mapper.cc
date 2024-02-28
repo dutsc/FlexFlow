@@ -115,7 +115,7 @@ FFMapper::FFMapper(MapperRuntime *rt,
   }
   total_nodes = address_space_set.size();
   if (enable_control_replication) {
-    log_ff_mapper.print("Enabled Control Replication Optimizations.");
+    // log_ff_mapper.print("Enabled Control Replication Optimizations.");
   }
   // if (strategyFile == "") {
   //   // No strategy file provided, use data parallelism

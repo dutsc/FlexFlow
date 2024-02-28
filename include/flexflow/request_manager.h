@@ -56,6 +56,10 @@ struct Request {
     COMPLETED = 103, // finished and verified
     FINISHING = 104, // finishing request, but not yet verified
   };
+  // PENDING:加载prompt的阶段,表示request刚创建完成,正在加载初始prompt。这是最初状态。
+  // RUNNING: 推理运行阶段,表示request的初始prompt已经加载完毕,正在调用模型进行生成。这是执行beam search的主体阶段。
+  // COMPLETED: 完成阶段,表示beam search结束,生成内容已经完整且全部验证通过。这个request完成生命周期,可以返回结果。
+  // FINISHING:接近完成阶段,beam search生成已结束,但是仍在进行最后验证。属于运行周期最后阶段。等待最后验证,即可转换为COMPLETED状态。
   BatchConfig::RequestGuid guid;
   int max_sequence_length;
   int initial_len;
@@ -131,7 +135,8 @@ public:
                               BeamInferenceResult const &result);
   BeamSearchBatchConfigFuture
       prepare_next_batch_beam(BeamSearchBatchConfigFuture const &old_bc,
-                              BeamInferenceResultFuture const &result);
+                              BeamInferenceResultFuture const &result,
+                              size_t i);
   BeamSearchBatchConfig
       prepare_next_batch_init(TreeVerifyBatchConfig const &old_bc,
                               InferenceResult const &result,
